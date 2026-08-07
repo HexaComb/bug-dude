@@ -1,0 +1,3 @@
+import Link from "next/link";
+
+export default function CommercialPage() { return <main className="section"><Link className="button button-plain" href="/">← Back to home</Link><h1 style={{ marginTop: 36, fontSize: "clamp(3rem,8vw,6rem)", lineHeight: .9, letterSpacing: "-.06em" }}>Commercial pest control starts with a straightforward conversation.</h1><p className="section-intro">The Bug Dude works with Fresno-area businesses, rental properties, and workspaces. Tell us about your property and issue so we can discuss the right service approach.</p><Link className="button button-primary" href="/#estimate">Request a commercial estimate</Link></main>; }

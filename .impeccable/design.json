@@ -1,0 +1,7 @@
+{
+  "northStar": "The Fresno Field Dispatch Board",
+  "motion": { "buttonLift": "transform 200ms ease", "reducedMotion": "disable nonessential transforms" },
+  "breakpoints": { "mobile": "800px" },
+  "elevation": { "dispatch": "16px 16px 0 rgba(0, 71, 114, .28)", "form": "12px 12px 0 #da2a25" },
+  "notes": "Logo-derived blue, red, and yellow are mandatory brand anchors."
+}
