@@ -24,7 +24,7 @@ button, input, select, textarea { font: inherit; }
 .brand img { width: 176px; height: auto; mix-blend-mode: multiply; }
 .nav-links { display: flex; align-items: center; gap: 24px; font-weight: 800; font-size: .88rem; letter-spacing: .02em; }
 .nav-links a:hover { color: var(--red); }
-.phone-link { white-space: nowrap; color: var(--red); font-size: .95rem; font-weight: 900; }
+.phone-link { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; color: var(--red); font-size: .95rem; font-weight: 900; }
 
 .hero { position: relative; isolation: isolate; overflow: hidden; background: var(--blue); min-height: 630px; color: #fff; }
 .hero:before,
