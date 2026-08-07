@@ -37,6 +37,102 @@ export const siteConfig = {
     "Warehouses & workspaces",
     "Homes",
   ] as const,
+  pestGuides: [
+    {
+      name: "Spiders",
+      summary:
+        "Fresno spider control for homes, offices, and storage areas where webs and activity keep showing up.",
+    },
+    {
+      name: "Ants",
+      summary:
+        "Ant control around kitchens, break rooms, storefronts, and rental units when trails become a daily nuisance.",
+    },
+    {
+      name: "Roaches",
+      summary:
+        "Roach control for restaurants, food service, apartments, and homes where sanitation and guest experience matter.",
+    },
+    {
+      name: "Mosquitoes",
+      summary:
+        "Mosquito concerns around outdoor workspaces, property grounds, and residential yards during warmer Fresno months.",
+    },
+    {
+      name: "Fleas & ticks",
+      summary:
+        "Flea and tick help for properties dealing with pet areas, landscaping edges, and recurring outdoor activity.",
+    },
+    {
+      name: "Earwigs",
+      summary:
+        "Earwig control when moisture-loving pests turn up in garages, warehouses, and ground-level rooms.",
+    },
+    {
+      name: "Bedbugs",
+      summary:
+        "Bedbug service conversations for rentals, multi-unit housing, and homes that need a clear next step fast.",
+    },
+    {
+      name: "Rodents",
+      summary:
+        "Rodent control for Fresno businesses and homes noticing droppings, nesting, or entry around the building.",
+    },
+  ] as const,
+  commercialGuides: [
+    {
+      name: "Offices & storefronts",
+      summary:
+        "Keep customer-facing spaces and staff areas free from ants, spiders, and other pests that hurt first impressions.",
+    },
+    {
+      name: "Restaurants & food service",
+      summary:
+        "Talk through kitchen and dining-area pest pressure with a local Fresno partner who understands food-service urgency.",
+    },
+    {
+      name: "Rental & apartment properties",
+      summary:
+        "Support property managers handling unit turnovers, tenant reports, and recurring pest issues across a portfolio.",
+    },
+    {
+      name: "Warehouses & workspaces",
+      summary:
+        "Address pest activity around receiving areas, storage, and staff spaces without a complicated sales pitch.",
+    },
+  ] as const,
+  faqs: [
+    {
+      question: "Do you offer commercial pest control in Fresno?",
+      answer:
+        "Yes. The Bug Dude Pest Control works with Fresno-area businesses, restaurants, rental properties, offices, and workspaces. Tell us what you’re seeing and we’ll discuss the right next step.",
+    },
+    {
+      question: "Do you also handle residential pest control?",
+      answer:
+        "Yes. We help Fresno homeowners with common household pests, including spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bedbugs, rodents, and more.",
+    },
+    {
+      question: "Can I get same-day pest control service?",
+      answer:
+        "Same-day service is available when we can make it work. Call 559-321-6230 during business hours and we’ll check timing for your property.",
+    },
+    {
+      question: "Do I have to sign a long-term contract?",
+      answer:
+        "No. One-time service and no-contract options are available so you can choose what fits your property and budget.",
+    },
+    {
+      question: "What if I’m not satisfied after service?",
+      answer:
+        "If you’re not satisfied, we’ll come back at no charge. Call us and we’ll schedule the follow-up.",
+    },
+    {
+      question: "What are your hours?",
+      answer:
+        "We’re available Monday–Friday, 7:30 AM–4:30 PM. Call 559-321-6230 or request an estimate online any time.",
+    },
+  ] as const,
   logoPath: "/bug-dude-logo.svg",
   pages: {
     home: {
@@ -208,6 +304,23 @@ export function buildBreadcrumbJsonLd(
       position: index + 1,
       name: item.name,
       item: absoluteUrl(item.path),
+    })),
+  };
+}
+
+export function buildFaqJsonLd(
+  faqs: ReadonlyArray<{ question: string; answer: string }> = siteConfig.faqs,
+): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
     })),
   };
 }
