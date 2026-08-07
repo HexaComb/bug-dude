@@ -54,7 +54,7 @@ The sender domain must be verified in Resend. Until all three Resend variables a
 
 ## Content and brand guardrails
 
-- The logo in `public/bug-dude-logo.svg` is a native SVG recreation of the supplied vehicle decal. Use it—not the vehicle photograph—as the production logo asset.
+- The production logo in `public/bug-dude-logo.png` was extracted from the real business truck/decal reference. Use this transparent PNG as the brand source; do not replace it with the retired generated/vector recreation.
 - Brand colors come from that mark: electric blue, red, and yellow. The detailed system lives in `DESIGN.md`; durable business facts and unresolved claims live in `PRODUCT.md`.
 - Do not invent testimonials, commercial clients, certifications, service-area details, licenses, response times, or guarantees. Current approved public details are the phone number `559-321-6230`, Monday–Friday hours of 7:30 AM–4:30 PM, and the services described in the existing site copy.
 - Keep commercial messaging concrete but careful: the site should invite property managers and business owners to start a conversation without claiming unverified expertise or case studies.
