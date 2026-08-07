@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide-react";
 import { EstimateForm } from "@/components/estimate-form";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { JsonLd } from "@/components/json-ld";
 import {
   absoluteUrl,
@@ -53,7 +54,7 @@ export default function Home() {
       <main>
         <section className="hero">
           <div className="hero-inner">
-            <div className="hero-copy">
+            <div className="hero-copy hero-arrival">
               <h1>
                 Pest control that keeps <em>business</em> moving.
               </h1>
@@ -72,7 +73,7 @@ export default function Home() {
                 </a>
               </div>
             </div>
-            <aside className="dispatch" aria-label="Commercial service request overview">
+            <aside className="dispatch dispatch-arrival" aria-label="Commercial service request overview">
               <span className="paint-mark">
                 LOCAL
                 <br />
@@ -110,6 +111,7 @@ export default function Home() {
             </a>
           </div>
         </section>
+        <ScrollReveal className="commercial-reveal">
         <section className="commercial-band" id="commercial">
           <div className="section">
             <h2>Built for the places Fresno works.</h2>
@@ -137,6 +139,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
+        <ScrollReveal>
         <section className="section" id="services">
           <div className="services-layout">
             <div>
@@ -172,6 +176,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
+        <ScrollReveal>
         <section className="quote-section" id="estimate">
           <div className="section">
             <div>
@@ -188,6 +194,7 @@ export default function Home() {
             <EstimateForm />
           </div>
         </section>
+        </ScrollReveal>
       </main>
       <footer className="site-footer">
         <div className="footer-inner">

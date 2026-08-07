@@ -110,6 +110,23 @@ button, input, select, textarea { font: inherit; }
 .footer-brand img { width: 142px; height: auto; mix-blend-mode: screen; }
 .footer-meta { color: #b9d7e6; font-size: .9rem; line-height: 1.5; }
 
+@media (prefers-reduced-motion: no-preference) {
+  .hero-arrival { animation: dispatch-copy-arrival 720ms cubic-bezier(.16, 1, .3, 1) both; }
+  .dispatch-arrival { animation: dispatch-ticket-arrival 760ms 110ms cubic-bezier(.16, 1, .3, 1) both; }
+  .scroll-reveal[data-reveal-state="queued"] > section { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(28px); }
+  .scroll-reveal > section { transition: clip-path 650ms cubic-bezier(.16, 1, .3, 1), transform 650ms cubic-bezier(.16, 1, .3, 1), opacity 260ms ease-out; }
+  .scroll-reveal[data-reveal-state="visible"] > section { opacity: 1; clip-path: inset(0 0 0 0); transform: translateY(0); }
+  .commercial-reveal[data-reveal-state="visible"] .property-list div { animation: roster-line-in 460ms cubic-bezier(.16, 1, .3, 1) both; }
+  .commercial-reveal[data-reveal-state="visible"] .property-list div:nth-child(2) { animation-delay: 80ms; }
+  .commercial-reveal[data-reveal-state="visible"] .property-list div:nth-child(3) { animation-delay: 160ms; }
+  .commercial-reveal[data-reveal-state="visible"] .property-list div:nth-child(4) { animation-delay: 240ms; }
+  .status-dot { animation: dispatch-status 2.2s ease-in-out infinite; }
+  @keyframes dispatch-copy-arrival { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes dispatch-ticket-arrival { from { opacity: 0; transform: translateX(48px) rotate(4deg); clip-path: inset(0 0 100% 0); } to { opacity: 1; transform: translateX(0) rotate(1.5deg); clip-path: inset(0 0 0 0); } }
+  @keyframes roster-line-in { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
+  @keyframes dispatch-status { 0%, 100% { box-shadow: 0 0 0 0 rgba(218, 42, 37, .35); } 50% { box-shadow: 0 0 0 8px rgba(218, 42, 37, 0); } }
+}
+
 @media (max-width: 800px) {
   .nav { min-height: 68px; } .brand img { width: 145px; } .nav-links { display: none; }
   .hero { min-height: auto; } .hero-inner, .services-layout, .quote-section .section { grid-template-columns: 1fr; gap: 38px; }
