@@ -48,6 +48,7 @@ Copy `.env.example` for local setup and add the same values in Vercel Project Se
 | `RESEND_FROM_EMAIL` | Verified Resend sender, e.g. `The Bug Dude <leads@domain.com>`. |
 | `LEAD_RECIPIENT_EMAIL` | Inbox that receives estimate requests. |
 | `NEXT_PUBLIC_BOOKING_URL` | Public URL for the selected booking provider. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical public site origin for metadata, sitemap, robots, and JSON-LD (e.g. `https://thebugdude.com`). Falls back to Vercel URL vars when unset. |
 
 The sender domain must be verified in Resend. Until all three Resend variables are set, the form intentionally returns a useful call-in fallback instead of silently dropping a lead.
 
@@ -62,6 +63,8 @@ The sender domain must be verified in Resend. Until all three Resend variables a
 
 1. Import `HexaComb/bug-dude` into Vercel.
 2. Set the environment variables above for Production (and Preview if testing submissions there).
-3. Verify the Resend sender domain and send a real test estimate request.
-4. Set `NEXT_PUBLIC_BOOKING_URL` after choosing the booking provider; `/book` remains safe before then.
-5. Confirm click-to-call, form success/error states, and mobile layout on the production URL.
+3. Set `NEXT_PUBLIC_SITE_URL` to the production domain so canonical URLs, sitemap, robots, and JSON-LD stay consistent.
+4. Verify the Resend sender domain and send a real test estimate request.
+5. Set `NEXT_PUBLIC_BOOKING_URL` after choosing the booking provider; `/book` remains safe before then.
+6. Confirm click-to-call, form success/error states, and mobile layout on the production URL.
+7. Submit the production sitemap in Google Search Console after launch.
