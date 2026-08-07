@@ -27,6 +27,14 @@ export const metadata: Metadata = {
 const phone = siteConfig.phoneDisplay;
 const phoneHref = siteConfig.phoneHref;
 
+const featuredPests = [
+  { name: "Black widow", image: "/pests/black-widow.webp" },
+  { name: "Ants", image: "/pests/ant.webp" },
+  { name: "German roach", image: "/pests/german-roach.webp" },
+  { name: "Mice", image: "/pests/mouse.webp" },
+  { name: "Bed bugs", image: "/pests/bed-bug.webp" },
+] as const;
+
 export default function Home() {
   return (
     <div className="page-shell">
@@ -43,7 +51,7 @@ export default function Home() {
       <header className="site-header">
         <nav className="nav" aria-label="Main navigation">
           <Link className="brand" href="/">
-            <Image src="/bug-dude-logo.svg" alt="The Bug Dude Pest Control" width={820} height={360} priority />
+            <Image src="/bug-dude-logo.png" alt="The Bug Dude Pest Control" width={1000} height={486} priority />
           </Link>
           <div className="nav-links">
             <a href="#commercial">Commercial</a>
@@ -191,6 +199,20 @@ export default function Home() {
               <p>
                 Common requests include ant control, roach control, spider control, mosquito concerns, flea and tick activity, earwig problems, bedbug service, and rodent control for Fresno homes and businesses.
               </p>
+              <div className="pest-photo-grid" aria-label="Common pests The Bug Dude treats">
+                {featuredPests.map((pest) => (
+                  <figure key={pest.name}>
+                    <Image
+                      src={pest.image}
+                      alt={pest.name}
+                      width={720}
+                      height={720}
+                      sizes="(max-width: 800px) 50vw, 20vw"
+                    />
+                    <figcaption>{pest.name}</figcaption>
+                  </figure>
+                ))}
+              </div>
               <ul className="pest-keyword-list">
                 {siteConfig.pestGuides.map((pest) => (
                   <li key={pest.name}>
@@ -283,8 +305,7 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-brand">
-            <Image src="/bug-dude-logo.svg" alt="The Bug Dude Pest Control" width={820} height={360} />
-            <span>Fresno Pest Control</span>
+            <Image src="/bug-dude-logo.png" alt="The Bug Dude Pest Control" width={1000} height={486} />
           </div>
           <div className="footer-meta">
             Serving {siteConfig.locality}, {siteConfig.region}

@@ -133,7 +133,7 @@ export const siteConfig = {
         "We’re available Monday–Friday, 7:30 AM–4:30 PM. Call 559-321-6230 or request an estimate online any time.",
     },
   ] as const,
-  logoPath: "/bug-dude-logo.svg",
+  logoPath: "/bug-dude-logo.png",
   pages: {
     home: {
       path: "/",

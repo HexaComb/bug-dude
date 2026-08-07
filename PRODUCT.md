@@ -37,12 +37,12 @@ Visitors often arrive from local search on mobile and need a fast answer to: can
 
 ## Brand Commitments
 
-Business name: The Bug Dude Pest Control. Voice should be direct, neighborly, and professional—not corporate or alarmist. A supplied vehicle-logo photograph carries an electric-blue paint splash with red-and-yellow lettering; it is the authoritative visual reference for the current build.
+Business name: The Bug Dude Pest Control. Voice should be direct, neighborly, and professional—not corporate or alarmist. A verified photograph of the real business truck/decal carries an electric-blue paint splash with red-and-yellow lettering; it is the authoritative visual reference for the current build.
 
 ## Evidence on Hand
 
 - Current website: same-day service may be available; current contact number and hours; pest categories above.
-- Vector logo recreation used by the site: `public/bug-dude-logo.svg`. The supplied vehicle photograph is retained only outside the project as the visual reference.
+- Production logo used by the site: `public/bug-dude-logo.png`, a transparent extraction based on the real business truck/decal reference.
 - No verified commercial customer list, testimonials, credentials, statistics, awards, address, or proprietary imagery was supplied. Do not fabricate these.
 
 ## Product Principles

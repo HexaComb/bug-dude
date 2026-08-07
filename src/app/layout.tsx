@@ -44,9 +44,9 @@ export const metadata: Metadata = {
     canonical: absoluteUrl("/"),
   },
   icons: {
-    icon: [{ url: "/bug-dude-logo.svg", type: "image/svg+xml" }],
-    shortcut: "/bug-dude-logo.svg",
-    apple: "/bug-dude-logo.svg",
+    icon: [{ url: "/bug-dude-logo.png", type: "image/png" }],
+    shortcut: "/bug-dude-logo.png",
+    apple: "/bug-dude-logo.png",
   },
   openGraph: {
     type: "website",
