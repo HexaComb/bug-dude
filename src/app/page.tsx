@@ -26,6 +26,7 @@ export const metadata: Metadata = {
 
 const phone = siteConfig.phoneDisplay;
 const phoneHref = siteConfig.phoneHref;
+const smsHref = `sms:${siteConfig.phoneE164}`;
 
 const featuredPests = [
   { name: "Black widow", image: "/pests/black-widow.webp" },
@@ -72,18 +73,22 @@ export default function Home() {
                 Pest control that keeps <em>business</em> moving.
               </h1>
               <p>
-                Local Fresno pest control for commercial properties, rentals, and homes. Tell us what’s happening and we’ll help you find the right next step.
+                Local Fresno pest control for commercial properties, rentals, and homes. Call or text us for a free estimate and tell us what’s happening.
               </p>
               <div className="action-row">
-                <a className="button button-primary" href="#estimate">
-                  Request an estimate <ArrowRight size={18} />
+                <a className="button button-primary" href={phoneHref}>
+                  <Phone size={18} /> Call for a free estimate
                 </a>
-                <a className="button button-alt" href="/book">
+                <a className="button button-alt" href={smsHref}>
+                  Text for a free estimate
+                </a>
+                <a className="button button-plain" href="/book">
                   Book service <ArrowRight size={18} />
                 </a>
-                <a className="button button-plain" href={phoneHref}>
-                  <Phone size={18} /> Call
-                </a>
+              </div>
+              <div className="bbb-mark" aria-label="Better Business Bureau">
+                <strong>BBB</strong>
+                <span>Better Business Bureau</span>
               </div>
             </div>
             <aside className="dispatch dispatch-arrival" aria-label="Commercial service request overview">
@@ -288,14 +293,17 @@ export default function Home() {
               <div>
                 <h2>Let’s get a look at the problem.</h2>
                 <p className="section-intro" style={{ color: "#79301e" }}>
-                  Request a Fresno pest control estimate for your home, rental, restaurant, office, or workspace. For immediate questions, call us during business hours: {siteConfig.hours.display}.
+                  Call or text for a free Fresno pest control estimate for your home, rental, restaurant, office, or workspace. We’re available during business hours: {siteConfig.hours.display}.
                 </p>
                 <p className="section-copy" style={{ color: "#79301e" }}>
                   Include the pest type if you know it—ants, roaches, spiders, bedbugs, rodents, or something else—and whether the property is commercial or residential. That helps us respond faster.
                 </p>
                 <div className="action-row">
                   <a className="button button-plain" href={phoneHref}>
-                    <Phone size={18} /> Call {phone}
+                    <Phone size={18} /> Call for a free estimate
+                  </a>
+                  <a className="button button-plain" href={smsHref}>
+                    Text for a free estimate
                   </a>
                 </div>
               </div>
