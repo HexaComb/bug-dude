@@ -65,6 +65,7 @@ button, input, select, textarea { font: inherit; }
 .bbb-mark strong { color: var(--blue-deep); font-size: 1.45rem; font-weight: 950; letter-spacing: -.05em; }
 .bbb-mark small { color: #3f6077; font-size: .64rem; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
 .button { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid transparent; font-weight: 900; transition: transform .2s ease, box-shadow .2s ease; cursor: pointer; }
+.button small { font-size: .76em; font-weight: 800; opacity: .9; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(5, 48, 72, .22); }
 .button-primary { background: var(--red); color: #fff; border-color: #fff; }
 .button-alt { background: var(--yellow); color: var(--ink); }
