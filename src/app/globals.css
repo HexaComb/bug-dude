@@ -59,6 +59,9 @@ button, input, select, textarea { font: inherit; }
 .hero h1 em { color: var(--yellow); font-style: normal; }
 .hero-copy p { max-width: 540px; margin: 27px 0 32px; font-size: 1.16rem; line-height: 1.55; font-weight: 600; }
 .action-row { display: flex; flex-wrap: wrap; gap: 13px; }
+.bbb-mark { width: fit-content; margin-top: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: .78rem; font-weight: 800; }
+.bbb-mark strong { width: 42px; height: 42px; display: grid; place-items: center; border: 2px solid currentColor; font-size: .8rem; letter-spacing: -.02em; }
+.bbb-mark span { max-width: 112px; line-height: 1.2; }
 .button { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid transparent; font-weight: 900; transition: transform .2s ease, box-shadow .2s ease; cursor: pointer; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(5, 48, 72, .22); }
 .button-primary { background: var(--red); color: #fff; border-color: #fff; }
