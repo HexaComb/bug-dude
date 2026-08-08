@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide-react";
 import { EstimateForm } from "@/components/estimate-form";
+import { CopyPhoneCta } from "@/components/copy-phone-cta";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { JsonLd } from "@/components/json-ld";
 import {
@@ -78,13 +79,8 @@ export default function Home() {
                 Local Fresno pest control for commercial properties, rentals, and homes. Call or text us for a free estimate and tell us what’s happening.
               </p>
               <div className="action-row">
-                <a className="button button-primary" href={phoneHref}>
-                  <Phone size={18} /> Call for a free estimate
-                </a>
-                <a className="button button-alt" href={smsHref}>
-                  Text for a free estimate
-                </a>
-                <a className="button button-plain" href="/book">
+                <CopyPhoneCta phoneNumber={phone} />
+                <a className="button button-alt" href="/book">
                   Book service <ArrowRight size={18} />
                 </a>
               </div>
