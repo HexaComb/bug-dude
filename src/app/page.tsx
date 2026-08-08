@@ -31,6 +31,7 @@ const smsHref = `sms:${siteConfig.phoneE164}`;
 const bbbProfileHref = "https://www.bbb.org/us/ca/clovis/profile/pest-control/the-bug-dude-pest-control-1126-850101818";
 const bbbSealSrc = "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg?tx=w_175";
 const googleReviewsHref = "https://maps.app.goo.gl/zXtjCVFg1iEYZuoz7";
+const yelpReviewsHref = "https://m.yelp.com/biz/the-bug-dude-pest-control-fresno";
 
 const customerReviews = [
   {
@@ -52,6 +53,16 @@ const customerReviews = [
     name: "jovanna Tobar",
     excerpt: "Our bug problem was taken care of quickly, with great communication along the way.",
     when: "Google review · 6 months ago",
+  },
+  {
+    name: "Linda G.",
+    excerpt: "He took care of our home. The quality and price were excellent compared to the other ones.",
+    when: "Yelp review · 2 years ago",
+  },
+  {
+    name: "John N.",
+    excerpt: "Very responsive and professional. He works with homeowners on how to address the problem without harming pets.",
+    when: "Yelp review · 3 years ago",
   },
 ] as const;
 
@@ -286,9 +297,14 @@ export default function Home() {
                   <p className="eyebrow">Five-star customer feedback</p>
                   <h2>Trusted by Fresno homes.</h2>
                 </div>
-                <a href={googleReviewsHref} target="_blank" rel="noopener noreferrer">
-                  Read more on Google <ArrowRight size={18} aria-hidden />
-                </a>
+                <div className="review-links">
+                  <a href={googleReviewsHref} target="_blank" rel="noopener noreferrer">
+                    Google reviews <ArrowRight size={18} aria-hidden />
+                  </a>
+                  <a href={yelpReviewsHref} target="_blank" rel="noopener noreferrer">
+                    Yelp reviews <ArrowRight size={18} aria-hidden />
+                  </a>
+                </div>
               </div>
               <div className="review-grid">
                 {customerReviews.map((review) => (
