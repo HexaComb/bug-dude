@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide-react";
 import { EstimateForm } from "@/components/estimate-form";
+import { CopyPhoneCta } from "@/components/copy-phone-cta";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { JsonLd } from "@/components/json-ld";
 import {
@@ -29,6 +30,41 @@ const phoneHref = siteConfig.phoneHref;
 const smsHref = `sms:${siteConfig.phoneE164}`;
 const bbbProfileHref = "https://www.bbb.org/us/ca/clovis/profile/pest-control/the-bug-dude-pest-control-1126-850101818";
 const bbbSealSrc = "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg?tx=w_175";
+const googleReviewsHref = "https://maps.app.goo.gl/zXtjCVFg1iEYZuoz7";
+const yelpReviewsHref = "https://m.yelp.com/biz/the-bug-dude-pest-control-fresno";
+
+const customerReviews = [
+  {
+    name: "Meagan Wilkerson",
+    excerpt: "Quick, fast service and multiple visits to get rid of our ant problem. Affordable, dependable, and reliable service!",
+    when: "Google review · 2 years ago",
+  },
+  {
+    name: "Prany Sinarong",
+    excerpt: "Quick and efficient, with great customer service. He does the job right.",
+    when: "Google review · 2 years ago",
+  },
+  {
+    name: "Brandon V",
+    excerpt: "It was an easy decision to stick with him. I recommend The Bug Dude to anybody needing pest control.",
+    when: "Google review · 2 years ago",
+  },
+  {
+    name: "jovanna Tobar",
+    excerpt: "Our bug problem was taken care of quickly, with great communication along the way.",
+    when: "Google review · 6 months ago",
+  },
+  {
+    name: "Linda G.",
+    excerpt: "He took care of our home. The quality and price were excellent compared to the other ones.",
+    when: "Yelp review · 2 years ago",
+  },
+  {
+    name: "John N.",
+    excerpt: "Very responsive and professional. He works with homeowners on how to address the problem without harming pets.",
+    when: "Yelp review · 3 years ago",
+  },
+] as const;
 
 const featuredPests = [
   { name: "Black widow", image: "/pests/black-widow.webp" },
@@ -78,13 +114,8 @@ export default function Home() {
                 Local Fresno pest control for commercial properties, rentals, and homes. Call or text us for a free estimate and tell us what’s happening.
               </p>
               <div className="action-row">
-                <a className="button button-primary" href={phoneHref}>
-                  <Phone size={18} /> Call for a free estimate
-                </a>
-                <a className="button button-alt" href={smsHref}>
-                  Text for a free estimate
-                </a>
-                <a className="button button-plain" href="/book">
+                <CopyPhoneCta phoneNumber={phone} />
+                <a className="button button-alt" href="/book">
                   Book service <ArrowRight size={18} />
                 </a>
               </div>
@@ -255,6 +286,38 @@ export default function Home() {
               <p className="section-copy">
                 Prefer to talk it through? Call {phone} during {siteConfig.hours.display}. Same-day pest control service may be possible when scheduling allows, and one-time service options are available when you don’t want a long-term plan.
               </p>
+            </div>
+          </section>
+        </ScrollReveal>
+        <ScrollReveal>
+          <section className="reviews-band" id="reviews">
+            <div className="section">
+              <div className="reviews-heading">
+                <div>
+                  <p className="eyebrow">Five-star customer feedback</p>
+                  <h2>Trusted by Fresno homes.</h2>
+                </div>
+                <div className="review-links">
+                  <a href={googleReviewsHref} target="_blank" rel="noopener noreferrer">
+                    Google reviews <ArrowRight size={18} aria-hidden />
+                  </a>
+                  <a href={yelpReviewsHref} target="_blank" rel="noopener noreferrer">
+                    Yelp reviews <ArrowRight size={18} aria-hidden />
+                  </a>
+                </div>
+              </div>
+              <div className="review-grid">
+                {customerReviews.map((review) => (
+                  <article key={review.name} className="review-card">
+                    <div className="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>“{review.excerpt}”</blockquote>
+                    <footer>
+                      <strong>{review.name}</strong>
+                      <span>{review.when}</span>
+                    </footer>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
         </ScrollReveal>
