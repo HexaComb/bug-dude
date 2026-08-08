@@ -199,20 +199,22 @@ export default function Home() {
               <p>
                 Common requests include ant control, roach control, spider control, mosquito concerns, flea and tick activity, earwig problems, bedbug service, and rodent control for Fresno homes and businesses.
               </p>
-              <div className="pest-photo-grid" aria-label="Common pests The Bug Dude treats">
+              <ul className="pest-icon-grid" aria-label="Common pests The Bug Dude treats">
                 {featuredPests.map((pest) => (
-                  <figure key={pest.name}>
-                    <Image
-                      src={pest.image}
-                      alt={pest.name}
-                      width={720}
-                      height={720}
-                      sizes="(max-width: 800px) 50vw, 20vw"
-                    />
-                    <figcaption>{pest.name}</figcaption>
-                  </figure>
+                  <li key={pest.name}>
+                    <span className="pest-icon" aria-hidden="true">
+                      <Image
+                        src={pest.image}
+                        alt=""
+                        width={96}
+                        height={96}
+                        sizes="52px"
+                      />
+                    </span>
+                    <span>{pest.name}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
               <ul className="pest-keyword-list">
                 {siteConfig.pestGuides.map((pest) => (
                   <li key={pest.name}>
