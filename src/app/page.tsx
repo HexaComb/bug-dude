@@ -30,6 +30,30 @@ const phoneHref = siteConfig.phoneHref;
 const smsHref = `sms:${siteConfig.phoneE164}`;
 const bbbProfileHref = "https://www.bbb.org/us/ca/clovis/profile/pest-control/the-bug-dude-pest-control-1126-850101818";
 const bbbSealSrc = "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg?tx=w_175";
+const googleReviewsHref = "https://maps.app.goo.gl/zXtjCVFg1iEYZuoz7";
+
+const customerReviews = [
+  {
+    name: "Meagan Wilkerson",
+    excerpt: "Quick, fast service and multiple visits to get rid of our ant problem. Affordable, dependable, and reliable service!",
+    when: "Google review · 2 years ago",
+  },
+  {
+    name: "Prany Sinarong",
+    excerpt: "Quick and efficient, with great customer service. He does the job right.",
+    when: "Google review · 2 years ago",
+  },
+  {
+    name: "Brandon V",
+    excerpt: "It was an easy decision to stick with him. I recommend The Bug Dude to anybody needing pest control.",
+    when: "Google review · 2 years ago",
+  },
+  {
+    name: "jovanna Tobar",
+    excerpt: "Our bug problem was taken care of quickly, with great communication along the way.",
+    when: "Google review · 6 months ago",
+  },
+] as const;
 
 const featuredPests = [
   { name: "Black widow", image: "/pests/black-widow.webp" },
@@ -251,6 +275,33 @@ export default function Home() {
               <p className="section-copy">
                 Prefer to talk it through? Call {phone} during {siteConfig.hours.display}. Same-day pest control service may be possible when scheduling allows, and one-time service options are available when you don’t want a long-term plan.
               </p>
+            </div>
+          </section>
+        </ScrollReveal>
+        <ScrollReveal>
+          <section className="reviews-band" id="reviews">
+            <div className="section">
+              <div className="reviews-heading">
+                <div>
+                  <p className="eyebrow">Five-star customer feedback</p>
+                  <h2>Trusted by Fresno homes.</h2>
+                </div>
+                <a href={googleReviewsHref} target="_blank" rel="noopener noreferrer">
+                  Read more on Google <ArrowRight size={18} aria-hidden />
+                </a>
+              </div>
+              <div className="review-grid">
+                {customerReviews.map((review) => (
+                  <article key={review.name} className="review-card">
+                    <div className="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <blockquote>“{review.excerpt}”</blockquote>
+                    <footer>
+                      <strong>{review.name}</strong>
+                      <span>{review.when}</span>
+                    </footer>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
         </ScrollReveal>
