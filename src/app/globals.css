@@ -59,9 +59,11 @@ button, input, select, textarea { font: inherit; }
 .hero h1 em { color: var(--yellow); font-style: normal; }
 .hero-copy p { max-width: 540px; margin: 27px 0 32px; font-size: 1.16rem; line-height: 1.55; font-weight: 600; }
 .action-row { display: flex; flex-wrap: wrap; gap: 13px; }
-.bbb-mark { width: fit-content; margin-top: 22px; display: flex; align-items: center; gap: 10px; color: #fff; font-size: .78rem; font-weight: 800; }
-.bbb-mark strong { width: 42px; height: 42px; display: grid; place-items: center; border: 2px solid currentColor; font-size: .8rem; letter-spacing: -.02em; }
-.bbb-mark span { max-width: 112px; line-height: 1.2; }
+.bbb-mark { width: fit-content; margin-top: 22px; padding: 8px 12px 8px 9px; display: inline-flex; align-items: center; gap: 12px; background: #fff; color: var(--ink); border-radius: 4px; box-shadow: 0 5px 16px rgba(5, 48, 72, .15); }
+.bbb-mark img { display: block; width: 116px; height: 44px; object-fit: contain; }
+.bbb-mark span { min-width: 52px; padding-left: 12px; display: grid; gap: 1px; border-left: 1px solid var(--line); line-height: 1; }
+.bbb-mark strong { color: var(--blue-deep); font-size: 1.45rem; font-weight: 950; letter-spacing: -.05em; }
+.bbb-mark small { color: #3f6077; font-size: .64rem; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
 .button { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 2px solid transparent; font-weight: 900; transition: transform .2s ease, box-shadow .2s ease; cursor: pointer; }
 .button:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(5, 48, 72, .22); }
 .button-primary { background: var(--red); color: #fff; border-color: #fff; }

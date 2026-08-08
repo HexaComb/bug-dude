@@ -27,6 +27,8 @@ export const metadata: Metadata = {
 const phone = siteConfig.phoneDisplay;
 const phoneHref = siteConfig.phoneHref;
 const smsHref = `sms:${siteConfig.phoneE164}`;
+const bbbProfileHref = "https://www.bbb.org/us/ca/clovis/profile/pest-control/the-bug-dude-pest-control-1126-850101818";
+const bbbSealSrc = "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg?tx=w_175";
 
 const featuredPests = [
   { name: "Black widow", image: "/pests/black-widow.webp" },
@@ -86,10 +88,19 @@ export default function Home() {
                   Book service <ArrowRight size={18} />
                 </a>
               </div>
-              <div className="bbb-mark" aria-label="Better Business Bureau">
-                <strong>BBB</strong>
-                <span>Better Business Bureau</span>
-              </div>
+              <a
+                className="bbb-mark"
+                href={bbbProfileHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="The Bug Dude Pest Control BBB profile — BBB Accredited Business with an A+ rating"
+              >
+                <img src={bbbSealSrc} alt="BBB Accredited Business" width="116" height="44" />
+                <span>
+                  <strong>A+</strong>
+                  <small>BBB Rating</small>
+                </span>
+              </a>
             </div>
             <aside className="dispatch dispatch-arrival" aria-label="Commercial service request overview">
               <span className="paint-mark">
