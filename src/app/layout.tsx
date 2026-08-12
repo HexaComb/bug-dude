@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "roach control Fresno",
     "spider control Fresno",
     "rodent control Fresno",
-    "bedbug control Fresno",
+    "bed bug control Fresno",
     "apartment pest control Fresno",
     "restaurant pest control Fresno",
     "property manager pest control",

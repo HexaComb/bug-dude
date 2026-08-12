@@ -49,7 +49,7 @@ export default function ServicesPage() {
         The Bug Dude Pest Control treats common household and commercial pests across Fresno. Whether you need residential pest control or help at a business property, tell us what you’re seeing and we’ll follow up with estimate options.
       </p>
       <p className="section-copy">
-        Local searches for ant control, roach control, spider control, bedbug service, and rodent control in Fresno usually mean someone wants a clear path to service—not a long brochure. Use this page to confirm we cover the pest you’re dealing with, then request an estimate or call{" "}
+        Local searches for ant control, roach control, spider control, bed bug service, and rodent control in Fresno usually mean someone wants a clear path to service—not a long brochure. Use this page to confirm we cover the pest you’re dealing with, then request an estimate or call{" "}
         <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a>.
       </p>
       <h2 className="content-subhead">Pests we help with in Fresno</h2>

@@ -96,7 +96,7 @@ export default function Home() {
             <a href="#commercial">Commercial</a>
             <a href="#services">Services</a>
             <a href="#faq">FAQ</a>
-            <a href="#estimate">Request estimate</a>
+            <a href="#estimate">Request an estimate</a>
           </div>
           <a className="phone-link" href={phoneHref}>
             <Phone size={16} aria-hidden /> {phone}
@@ -178,7 +178,7 @@ export default function Home() {
                 Commercial pest control in Fresno should feel practical, not corporate. Whether you manage an office, restaurant, rental portfolio, or warehouse, The Bug Dude is a local partner for active pest issues and recurring service conversations.
               </p>
               <p className="section-copy section-copy-light">
-                Property managers and business owners call us when ants show up in a break room, roaches pressure a kitchen, spiders keep reappearing in a storefront, or rodents become a facilities problem. We keep the process simple: tell us the property type, describe what you’re seeing, and we’ll help you decide on an estimate and schedule.
+                Property managers and business owners call us when ants show up in a break room, roaches appear in a kitchen, spiders keep reappearing in a storefront, or rodents become a facilities problem. We keep the process simple: tell us the property type, describe what you’re seeing, and we’ll help you decide on the next steps for an estimate and scheduling.
               </p>
               <div className="property-list">
                 <div>
@@ -211,7 +211,7 @@ export default function Home() {
                   Looking for residential pest control in Fresno or help with a commercial property? We handle common household and business pests and follow up on the issue you report—no fluff, no mystery process.
                 </p>
                 <p className="section-copy">
-                  Searchers often need a clear answer fast: Can you treat ants, roaches, spiders, bedbugs, or rodents in Fresno? Can you come out for a one-time service? Do you offer flexible options without a long contract? Yes—share the details and we’ll respond with next steps.
+                  Searchers often need a clear answer fast: Can you treat ants, roaches, spiders, bed bugs, or rodents in Fresno? Can you come out for a one-time service? Do you offer flexible options without a long contract? Yes—share the details and we’ll respond with next steps.
                 </p>
                 <Link className="button button-plain" href="/services">
                   View pest services <ArrowRight size={18} />
@@ -221,7 +221,7 @@ export default function Home() {
                 <Service
                   icon={<Bug />}
                   title="Crawling & flying pests"
-                  text="Spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bedbugs, and more."
+                  text="Spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, and more."
                 />
                 <Service
                   icon={<Rat />}
@@ -243,7 +243,7 @@ export default function Home() {
             <div className="pest-keyword-block">
               <h3>Fresno pest control coverage</h3>
               <p>
-                Common requests include ant control, roach control, spider control, mosquito concerns, flea and tick activity, earwig problems, bedbug service, and rodent control for Fresno homes and businesses.
+                Common requests include ant control, roach control, spider control, mosquito concerns, flea and tick activity, earwig problems, bed bug service, and rodent control for Fresno homes and businesses.
               </p>
               <ul className="pest-icon-grid" aria-label="Common pests The Bug Dude treats">
                 {featuredPests.map((pest) => (
@@ -294,7 +294,7 @@ export default function Home() {
               <div className="reviews-heading">
                 <div>
                   <p className="eyebrow">Five-star customer feedback</p>
-                  <h2>Trusted by Fresno homes.</h2>
+                  <h2>Trusted by Fresno homeowners.</h2>
                 </div>
                 <div className="review-links">
                   <a href={googleReviewsHref} target="_blank" rel="noopener noreferrer">
@@ -369,7 +369,7 @@ export default function Home() {
                   Call or text for a free Fresno pest control estimate for your home, rental, restaurant, office, or workspace. We’re available during business hours: {siteConfig.hours.display}.
                 </p>
                 <p className="section-copy" style={{ color: "#79301e" }}>
-                  Include the pest type if you know it—ants, roaches, spiders, bedbugs, rodents, or something else—and whether the property is commercial or residential. That helps us respond faster.
+                  Include the pest type if you know it—ants, roaches, spiders, bed bugs, rodents, or something else—and whether the property is commercial or residential. That helps us respond faster.
                 </p>
                 <div className="action-row">
                   <a className="button button-plain" href={phoneHref}>

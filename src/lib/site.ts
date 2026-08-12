@@ -5,7 +5,7 @@ export const siteConfig = {
   shortName: "The Bug Dude",
   tagline: "Fresno commercial and residential pest control",
   description:
-    "Local Fresno pest control for commercial properties, rentals, and homes. Same-day service when we can make it work, flexible options, and a no-charge follow-up if you’re not satisfied.",
+    "Local Fresno pest control for commercial properties, rentals, and homes. We offer same-day service when we can make it work, flexible options, and a no-charge follow-up if you’re not satisfied.",
   phoneDisplay: "559-321-6230",
   phoneE164: "+15593216230",
   phoneHref: "tel:+15593216230",
@@ -27,7 +27,7 @@ export const siteConfig = {
     "fleas",
     "ticks",
     "earwigs",
-    "bedbugs",
+    "bed bugs",
     "rodents",
   ] as const,
   propertyTypes: [
@@ -56,7 +56,7 @@ export const siteConfig = {
     {
       name: "Mosquitoes",
       summary:
-        "Mosquito concerns around outdoor workspaces, property grounds, and residential yards during warmer Fresno months.",
+        "Mosquito concerns around outdoor workspaces, property grounds, and residential yards during the warmer months in Fresno.",
     },
     {
       name: "Fleas & ticks",
@@ -69,9 +69,9 @@ export const siteConfig = {
         "Earwig control when moisture-loving pests turn up in garages, warehouses, and ground-level rooms.",
     },
     {
-      name: "Bedbugs",
+      name: "Bed bugs",
       summary:
-        "Bedbug service conversations for rentals, multi-unit housing, and homes that need a clear next step fast.",
+        "Bed bug service conversations for rentals, multi-unit housing, and homes that need a clear next step fast.",
     },
     {
       name: "Rodents",
@@ -110,7 +110,7 @@ export const siteConfig = {
     {
       question: "Do you also handle residential pest control?",
       answer:
-        "Yes. We help Fresno homeowners with common household pests, including spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bedbugs, rodents, and more.",
+        "Yes. We help Fresno homeowners with common household pests, including spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more.",
     },
     {
       question: "Can I get same-day pest control service?",
@@ -151,7 +151,7 @@ export const siteConfig = {
       path: "/services",
       title: "Pest Control Services in Fresno",
       description:
-        "Fresno pest control for spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bedbugs, rodents, and more. Request an estimate today.",
+        "Fresno pest control for spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more. Request an estimate today.",
     },
   },
 } as const;
