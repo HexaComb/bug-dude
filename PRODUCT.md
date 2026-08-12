@@ -32,8 +32,9 @@ Visitors often arrive from local search on mobile and need a fast answer to: can
 - Form submissions send via Resend from a server-side route; sender, recipient, and booking URL are environment configuration.
 - Deploy to Vercel.
 - Confirmed public contact detail: 559-321-6230 and Monday–Friday, 7:30 AM–4:30 PM.
+- Confirmed service area: Fresno County and Madera County.
 - Current site lists spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bedbugs, rodents, and more.
-- Undecided: service area beyond Fresno, email address, booking provider, business address, licensing/insurance claims, commercial case studies, testimonials, and service guarantees beyond the stated retreat policy.
+- Undecided: email address, booking provider, business address, licensing/insurance claims, commercial case studies, testimonials, and service guarantees beyond the stated retreat policy.
 
 ## Brand Commitments
 

@@ -32,8 +32,10 @@ export function CopyPhoneCta({ className = "button button-primary", phoneNumber 
   return (
     <button className={className} type="button" onClick={copyPhoneNumber} aria-live="polite">
       <Phone size={18} aria-hidden />
-      <span>{copied ? "Number copied" : "Call OR Text"}</span>
-      {!copied && <small>{phoneNumber}</small>}
+      <span className="copy-phone-content">
+        <span>{copied ? "Number copied" : "Call or text"}</span>
+        {!copied && <small>{phoneNumber}</small>}
+      </span>
     </button>
   );
 }

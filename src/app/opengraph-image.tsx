@@ -40,7 +40,7 @@ export default function OpenGraphImage() {
               borderRadius: 999,
             }}
           />
-          Local to Fresno
+          Fresno County and Madera County
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 22, maxWidth: 920 }}>
           <div

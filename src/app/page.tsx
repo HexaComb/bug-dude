@@ -113,34 +113,33 @@ export default function Home() {
               <p>
                 Local Fresno pest control for commercial properties, rentals, and homes. Call or text us for a free estimate and tell us what’s happening.
               </p>
-              <div className="action-row">
-                <CopyPhoneCta phoneNumber={phone} />
-                <a className="button button-alt" href="/book">
-                  Book service <ArrowRight size={18} />
+              <div className="hero-conversion">
+                <div className="action-row">
+                  <CopyPhoneCta phoneNumber={phone} />
+                  <a className="button button-alt" href="/book">
+                    Book service <ArrowRight size={18} aria-hidden />
+                  </a>
+                </div>
+                <a
+                  className="bbb-mark"
+                  href={bbbProfileHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="See reviews on The Bug Dude Pest Control BBB profile — BBB Accredited Business with an A+ rating"
+                >
+                  <img src={bbbSealSrc} alt="BBB Accredited Business" width="116" height="44" />
+                  <span className="bbb-rating">
+                    <strong>A+</strong>
+                    <small>BBB Rating</small>
+                  </span>
+                  <span className="bbb-profile-link">
+                    See reviews <ArrowRight size={15} aria-hidden />
+                  </span>
                 </a>
               </div>
-              <a
-                className="bbb-mark"
-                href={bbbProfileHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="The Bug Dude Pest Control BBB profile — BBB Accredited Business with an A+ rating"
-              >
-                <img src={bbbSealSrc} alt="BBB Accredited Business" width="116" height="44" />
-                <span>
-                  <strong>A+</strong>
-                  <small>BBB Rating</small>
-                </span>
-              </a>
             </div>
             <aside className="dispatch dispatch-arrival" aria-label="Commercial service request overview">
-              <span className="paint-mark">
-                LOCAL
-                <br />
-                TO
-                <br />
-                FRESNO
-              </span>
+              <p className="service-area-banner">Serving Fresno County and Madera County</p>
               <div className="dispatch-body">
                 <p className="dispatch-title">Start a service request</p>
                 <div className="request-line">
