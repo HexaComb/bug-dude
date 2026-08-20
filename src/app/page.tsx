@@ -175,7 +175,7 @@ export default function Home() {
             <div className="section">
               <h2>For Fresno.</h2>
               <p className="section-intro">
-                Offices, restaurants, rentals, warehouses—if pests are showing up at a property you manage, we’ll look at the situation with you. No corporate pitch. Just a clear conversation about what’s going on and what to do next.
+                Offices, restaurants, rentals, warehouses—if pests are showing up at a property you manage, we’ll look at the situation with you. No sales pitch. Just a clear conversation about what’s going on and what to do next.
               </p>
               <p className="section-copy section-copy-light">
                 Property managers and business owners usually call when ants hit a break room, roaches show up in a kitchen, spiders keep coming back in a storefront, or rodents become a facilities problem. Tell us the property type and what you’re seeing. We’ll talk through an estimate and scheduling from there.
