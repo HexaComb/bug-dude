@@ -41,15 +41,15 @@ export default function CommercialPage() {
         ← Back to home
       </Link>
       <h1 style={{ marginTop: 36, fontSize: "clamp(3rem,8vw,6rem)", lineHeight: 0.9, letterSpacing: "-.06em" }}>
-        Commercial pest control in Fresno starts with a straightforward conversation.
+        Commercial pest control that starts with a real conversation.
       </h1>
       <p className="section-intro">
-        The Bug Dude Pest Control helps Fresno-area businesses, rental properties, restaurants, offices, and workspaces deal with active pest problems without a hard sell. Tell us about the property and the issue so we can discuss estimate and scheduling options.
+        The Bug Dude helps Fresno-area businesses, rentals, restaurants, offices, and workspaces with active pest problems. Tell us about the property and what you’re seeing. We’ll talk through an estimate and scheduling.
       </p>
       <p className="section-copy">
-        Commercial pest control searches in Fresno often come from facilities managers, owners, and property managers who need a reliable local call for ants, roaches, spiders, rodents, or other pests affecting staff, tenants, or customers. We keep the intake simple and focused on what you’re seeing on site.
+        Facilities managers, owners, and property managers usually call when ants, roaches, spiders, rodents, or other pests affect staff, tenants, or customers. Keep it simple: describe the site and the issue, and we’ll take it from there.
       </p>
-      <h2 className="content-subhead">Properties we commonly discuss</h2>
+      <h2 className="content-subhead">Properties we often hear from</h2>
       <div className="guide-list">
         {siteConfig.commercialGuides.map((guide) => (
           <article key={guide.name} className="guide-item">
@@ -58,13 +58,13 @@ export default function CommercialPage() {
           </article>
         ))}
       </div>
-      <h2 className="content-subhead">What to expect from a commercial estimate request</h2>
+      <h2 className="content-subhead">What to expect when you request an estimate</h2>
       <p className="section-copy">
-        Share the business type, pest concern, and urgency. If same-day service timing matters, call{" "}
-        <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a> during {siteConfig.hours.display} and we’ll check what we can make work. One-time service and no-contract options are available when you need flexibility.
+        Share the business type, pest concern, and how soon you need help. If same-day timing matters, call{" "}
+        <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a> during {siteConfig.hours.display} and we’ll check what we can make work. One-time and no-contract options are available when you need flexibility.
       </p>
       <p className="section-copy">
-        Prefer to start online? Send a commercial estimate request with the property details and we’ll follow up. If you’re not satisfied after service, we’ll come back at no charge.
+        Prefer to start online? Send an estimate request with the property details and we’ll follow up. If you’re not satisfied after service, we’ll come back at no charge.
       </p>
       <div className="action-row" style={{ marginTop: 28 }}>
         <Link className="button button-primary" href="/#estimate">

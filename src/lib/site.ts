@@ -3,9 +3,9 @@
 export const siteConfig = {
   name: "The Bug Dude Pest Control",
   shortName: "The Bug Dude",
-  tagline: "Fresno commercial and residential pest control",
+  tagline: "Pest control for Fresno businesses and homes",
   description:
-    "Local Fresno pest control for commercial properties, rentals, and homes. We offer same-day service when we can make it work, flexible options, and a no-charge follow-up if you’re not satisfied.",
+    "Local pest control in Fresno County and Madera County for businesses, rentals, and homes. Call or send a note—we’ll look at what’s going on and talk through next steps.",
   phoneDisplay: "559-321-6230",
   phoneE164: "+15593216230",
   phoneHref: "tel:+15593216230",
@@ -41,96 +41,96 @@ export const siteConfig = {
     {
       name: "Spiders",
       summary:
-        "Fresno spider control for homes, offices, and storage areas where webs and activity keep showing up.",
+        "When you see webs or spiders in corners, closets, or storage, call us for help with spiders.",
     },
     {
       name: "Ants",
       summary:
-        "Ant control around kitchens, break rooms, storefronts, and rental units when trails become a daily nuisance.",
+        "When you see trails or ants in the kitchen or break room, call us for help with ants.",
     },
     {
       name: "Roaches",
       summary:
-        "Roach control for restaurants, food service, apartments, and homes where sanitation and guest experience matter.",
+        "When you see them at night or notice droppings, call us for help with roaches.",
     },
     {
       name: "Mosquitoes",
       summary:
-        "Mosquito concerns around outdoor workspaces, property grounds, and residential yards during the warmer months in Fresno.",
+        "When you get bites outdoors or see them swarming near standing water or the yard, call us for help with mosquitoes.",
     },
     {
       name: "Fleas & ticks",
       summary:
-        "Flea and tick help for properties dealing with pet areas, landscaping edges, and recurring outdoor activity.",
+        "When pets are scratching or you’re getting bites near yard or pet areas, call us for help with fleas & ticks.",
     },
     {
       name: "Earwigs",
       summary:
-        "Earwig control when moisture-loving pests turn up in garages, warehouses, and ground-level rooms.",
+        "When you see them in the garage or around damp ground-level areas, call us for help with earwigs.",
     },
     {
       name: "Bed bugs",
       summary:
-        "Bed bug service conversations for rentals, multi-unit housing, and homes that need a clear next step fast.",
+        "When you notice bites or blood spots on sheets, call us for help with bed bugs.",
     },
     {
       name: "Rodents",
       summary:
-        "Rodent control for Fresno businesses and homes noticing droppings, nesting, or entry around the building.",
+        "When you see droppings, nesting, or scratching and entry signs, call us for help with rodents.",
     },
   ] as const,
   commercialGuides: [
     {
       name: "Offices & storefronts",
       summary:
-        "Keep customer-facing spaces and staff areas free from ants, spiders, and other pests that hurt first impressions.",
+        "Ants, spiders, and other pests in customer areas and staff spaces. We’ll look at what’s going on and talk through options.",
     },
     {
       name: "Restaurants & food service",
       summary:
-        "Talk through kitchen and dining-area pest pressure with a local Fresno partner who understands food-service urgency.",
+        "Kitchen and dining-area pest issues. Call or send details so we can discuss timing and an estimate.",
     },
     {
       name: "Rental & apartment properties",
       summary:
-        "Support property managers handling unit turnovers, tenant reports, and recurring pest issues across a portfolio.",
+        "For property managers dealing with unit turnovers, tenant reports, or pests across a few buildings.",
     },
     {
       name: "Warehouses & workspaces",
       summary:
-        "Address pest activity around receiving areas, storage, and staff spaces without a complicated sales pitch.",
+        "Pest activity around receiving, storage, and staff areas. Simple intake—no long sales pitch.",
     },
   ] as const,
   faqs: [
     {
       question: "Do you offer commercial pest control in Fresno?",
       answer:
-        "Yes. The Bug Dude Pest Control works with Fresno-area businesses, restaurants, rental properties, offices, and workspaces. Tell us what you’re seeing and we’ll discuss the right next step.",
+        "Yes. We work with Fresno-area businesses, restaurants, rentals, offices, and workspaces. Tell us what you’re seeing and we’ll talk through next steps.",
     },
     {
       question: "Do you also handle residential pest control?",
       answer:
-        "Yes. We help Fresno homeowners with common household pests, including spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more.",
+        "Yes. We help Fresno homeowners with common pests—spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more.",
     },
     {
       question: "Can I get same-day pest control service?",
       answer:
-        "Same-day service is available when we can make it work. Call 559-321-6230 during business hours and we’ll check timing for your property.",
+        "Sometimes, when we can make it work. Call 559-321-6230 during business hours and we’ll check timing for your place.",
     },
     {
       question: "Do I have to sign a long-term contract?",
       answer:
-        "No. One-time service and no-contract options are available so you can choose what fits your property and budget.",
+        "No. One-time service and no-contract options are available. You can choose what fits.",
     },
     {
       question: "What if I’m not satisfied after service?",
       answer:
-        "If you’re not satisfied, we’ll come back at no charge. Call us and we’ll schedule the follow-up.",
+        "If you’re not satisfied, we’ll come back at no charge. Call us and we’ll set up the follow-up.",
     },
     {
       question: "What are your hours?",
       answer:
-        "We’re available Monday–Friday, 7:30 AM–4:30 PM. Call 559-321-6230 or request an estimate online any time.",
+        "Monday–Friday, 7:30 AM–4:30 PM. Call 559-321-6230 or request an estimate online anytime.",
     },
   ] as const,
   logoPath: "/bug-dude-logo.png",
@@ -139,19 +139,19 @@ export const siteConfig = {
       path: "/",
       title: "Fresno Commercial & Residential Pest Control",
       description:
-        "The Bug Dude Pest Control serves Fresno businesses, rentals, and homes. Call 559-321-6230 or request an estimate for local pest control.",
+        "The Bug Dude Pest Control helps Fresno businesses, rentals, and homes with common pests. Call 559-321-6230 or request an estimate.",
     },
     commercial: {
       path: "/commercial",
       title: "Commercial Pest Control in Fresno",
       description:
-        "Commercial pest control for Fresno offices, restaurants, rentals, and workspaces. Start with a straightforward estimate conversation.",
+        "Commercial pest control for Fresno offices, restaurants, rentals, and workspaces. Call or request an estimate to start the conversation.",
     },
     services: {
       path: "/services",
       title: "Pest Control Services in Fresno",
       description:
-        "Fresno pest control for spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more. Request an estimate today.",
+        "Fresno pest control for spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more. Call or request an estimate.",
     },
   },
 } as const;

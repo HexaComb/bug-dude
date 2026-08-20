@@ -54,7 +54,7 @@ export default function OpenGraphImage() {
             {siteConfig.name}
           </div>
           <div style={{ fontSize: 34, fontWeight: 700, lineHeight: 1.25, maxWidth: 860 }}>
-            Commercial and residential pest control for Fresno businesses, rentals, and homes.
+            Pest control for Fresno businesses, rentals, and homes.
           </div>
         </div>
         <div

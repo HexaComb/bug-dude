@@ -59,8 +59,9 @@ button, input, select, textarea { font: inherit; }
 .hero h1 em { color: var(--yellow); font-style: normal; }
 .hero-copy p { max-width: 540px; margin: 27px 0 32px; font-size: 1.16rem; line-height: 1.55; font-weight: 600; }
 .hero-conversion { width: min(100%, 540px); display: grid; gap: 12px; }
-.action-row { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(165px, .8fr); gap: 12px; }
-.action-row > * { width: 100%; }
+.link-underline { text-decoration: underline; text-underline-offset: 3px; }
+.action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
+.action-row > * { width: 100%; min-height: 52px; box-sizing: border-box; }
 .bbb-mark { width: 100%; min-height: 62px; padding: 8px 14px 8px 10px; display: flex; align-items: center; gap: 12px; background: #fff; color: var(--ink); border-radius: 4px; box-shadow: 0 5px 16px rgba(5, 48, 72, .15); transition: transform .2s ease, box-shadow .2s ease; }
 .bbb-mark img { display: block; width: 116px; height: 44px; object-fit: contain; }
 .bbb-rating { min-width: 64px; padding-left: 12px; display: grid; gap: 1px; border-left: 1px solid var(--line); line-height: 1; }
@@ -86,7 +87,7 @@ button, input, select, textarea { font: inherit; }
 .status-dot { width: 12px; height: 12px; flex: 0 0 auto; background: var(--red); border-radius: 50%; }
 .call-strip { position: relative; z-index: 1; background: var(--red); color: #fff; }
 .call-strip-inner { max-width: 1180px; margin: 0 auto; padding: 17px 22px; display: flex; justify-content: space-between; align-items: center; gap: 20px; font-size: 1rem; font-weight: 850; }
-.call-strip a { color: var(--yellow); font-size: 1.13rem; white-space: nowrap; }
+.call-strip a { display: inline-flex; align-items: center; gap: 6px; flex-shrink: 0; color: var(--yellow); font-size: 1.13rem; white-space: nowrap; }
 .section { max-width: 1180px; margin: 0 auto; padding: 105px 22px; }
 .section h2 { max-width: 770px; margin: 0; font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: .96; letter-spacing: -.055em; font-weight: 950; text-wrap: balance; }
 .section-intro { max-width: 680px; margin: 21px 0 44px; font-size: 1.1rem; line-height: 1.6; color: #31526a; }

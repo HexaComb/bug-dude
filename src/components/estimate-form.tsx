@@ -20,7 +20,7 @@ export function EstimateForm() {
     }
     form.reset();
     setStatus("success");
-    setMessage("Thanks—your request is on its way. We’ll be in touch soon.");
+    setMessage("Thanks—we got your note. We’ll be in touch soon.");
   }
 
   return <form className="estimate-form" onSubmit={submit}>
@@ -29,9 +29,9 @@ export function EstimateForm() {
       <div className="field"><label htmlFor="phone">Phone</label><input id="phone" name="phone" required type="tel" autoComplete="tel" /></div>
       <div className="field"><label htmlFor="email">Email</label><input id="email" name="email" type="email" autoComplete="email" /></div>
       <div className="field"><label htmlFor="propertyType">Property type</label><select id="propertyType" name="propertyType" defaultValue=""><option value="" disabled>Select one</option><option>Commercial property</option><option>Residential home</option><option>Apartment or rental</option><option>Other</option></select></div>
-      <div className="field full"><label htmlFor="pestIssue">What can we help with?</label><textarea id="pestIssue" name="pestIssue" required placeholder="Tell us about the pest issue, property, and preferred timing." /></div>
+      <div className="field full"><label htmlFor="pestIssue">What’s going on?</label><textarea id="pestIssue" name="pestIssue" required placeholder="Pest, where you’re seeing it, and when you’d like help." /></div>
     </div>
-    <button className="button button-primary" disabled={status === "sending"} type="submit">{status === "sending" ? "Sending request…" : "Request an estimate"}</button>
+    <button className="button button-primary" disabled={status === "sending"} type="submit">{status === "sending" ? "Sending…" : "Request an estimate"}</button>
     <p className={`form-message ${status}`} aria-live="polite">{message}</p>
   </form>;
 }
