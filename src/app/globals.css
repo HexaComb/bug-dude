@@ -75,7 +75,7 @@ button, input, select, textarea { font: inherit; }
 .button-primary { background: var(--red); color: #fff; border-color: #fff; }
 .button-alt { background: var(--yellow); color: var(--ink); }
 .button-plain { background: #fff; color: var(--blue-deep); border-color: var(--blue-deep); }
-.dispatch { position: relative; background: #fff; color: var(--ink); box-shadow: 16px 16px 0 rgba(0, 71, 114, .28); transform: rotate(1.5deg); }
+.dispatch { position: relative; background: #fff; color: var(--ink); box-shadow: 16px 16px 0 rgba(0, 71, 114, .28); }
 .dispatch:before { content: "COMMERCIAL SERVICE REQUEST"; display: block; padding: 13px 20px; background: var(--ink); color: var(--yellow); font-size: .76rem; letter-spacing: .13em; font-weight: 900; }
 .service-area-banner { margin: 0; padding: 8px 20px; background: var(--yellow); color: var(--red); font-size: .72rem; font-weight: 950; letter-spacing: .06em; line-height: 1.25; text-align: center; text-transform: uppercase; }
 .dispatch-body { padding: 24px; }
@@ -181,7 +181,7 @@ button, input, select, textarea { font: inherit; }
   .commercial-reveal[data-reveal-state="visible"] .property-list div:nth-child(4) { animation-delay: 240ms; }
   .status-dot { animation: dispatch-status 2.2s ease-in-out infinite; }
   @keyframes dispatch-copy-arrival { from { opacity: 0; transform: translateY(34px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes dispatch-ticket-arrival { from { opacity: 0; transform: translateX(48px) rotate(4deg); clip-path: inset(0 0 100% 0); } to { opacity: 1; transform: translateX(0) rotate(1.5deg); clip-path: inset(0 0 0 0); } }
+  @keyframes dispatch-ticket-arrival { from { opacity: 0; transform: translateX(48px); clip-path: inset(0 0 100% 0); } to { opacity: 1; transform: translateX(0); clip-path: inset(0 0 0 0); } }
   @keyframes roster-line-in { from { opacity: 0; transform: translateX(-18px); } to { opacity: 1; transform: translateX(0); } }
   @keyframes dispatch-status { 0%, 100% { box-shadow: 0 0 0 0 rgba(218, 42, 37, .35); } 50% { box-shadow: 0 0 0 8px rgba(218, 42, 37, 0); } }
 }
