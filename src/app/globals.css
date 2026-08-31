@@ -159,7 +159,9 @@ button, input, select, textarea { font: inherit; }
 .field-split { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
 .field-split-page { margin: 8px 0 42px; }
 .field-photo { margin: 0; background: #fff; box-shadow: 12px 12px 0 rgba(0, 71, 114, .18); }
-.field-photo img { display: block; width: 100%; height: auto; }
+.field-photo img,
+.field-photo video { display: block; width: 100%; height: auto; background: var(--ink); }
+.field-photo video { aspect-ratio: 9 / 16; object-fit: cover; }
 .field-photo figcaption { padding: 12px 14px; color: #3f6077; font-size: .82rem; line-height: 1.4; font-weight: 800; border-top: 1px solid var(--line); }
 .pest-photo-grid { margin: 8px 0 36px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .estimate-form { padding: 28px; background: #fff; box-shadow: 12px 12px 0 var(--red); }

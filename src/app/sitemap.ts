@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { fieldWorkVideo } from "@/lib/field-media";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,6 +11,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified,
       changeFrequency: "weekly",
       priority: 1,
+      videos: [
+        {
+          title: fieldWorkVideo.title,
+          thumbnail_loc: absoluteUrl(fieldWorkVideo.poster),
+          description: fieldWorkVideo.description,
+          content_loc: absoluteUrl(fieldWorkVideo.src),
+        },
+      ],
     },
     {
       url: absoluteUrl(siteConfig.pages.commercial.path),

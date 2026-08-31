@@ -6,9 +6,10 @@ import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide
 import { EstimateForm } from "@/components/estimate-form";
 import { CopyPhoneCta } from "@/components/copy-phone-cta";
 import { FieldPhoto } from "@/components/field-photo";
+import { FieldWorkMedia } from "@/components/field-work-media";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { JsonLd } from "@/components/json-ld";
-import { ownerFieldPhotos, pestFieldPhotos } from "@/lib/field-media";
+import { ownerFieldPhotos, pestFieldPhotos, fieldWorkVideo } from "@/lib/field-media";
 import {
   absoluteUrl,
   buildFaqJsonLd,
@@ -24,6 +25,14 @@ export const metadata: Metadata = {
     url: absoluteUrl("/"),
     title: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
     description: siteConfig.pages.home.description,
+    videos: [
+      {
+        url: absoluteUrl(fieldWorkVideo.src),
+        type: fieldWorkVideo.type,
+        width: fieldWorkVideo.width,
+        height: fieldWorkVideo.height,
+      },
+    ],
   },
 };
 
@@ -211,7 +220,7 @@ export default function Home() {
               <p className="eyebrow">From the truck</p>
               <h2>This is the work.</h2>
               <p className="section-intro">
-                You’ll see the Bug Dude truck on residential streets and at the properties people call about. The photos here are from real stops—the owner on a job, and pests found around homes.
+                You’ll see the Bug Dude truck on residential streets and at the properties people call about. The clip and photos here are from real stops—the owner on a job, and pests found around homes.
               </p>
             </div>
             <div className="field-split">
@@ -221,12 +230,7 @@ export default function Home() {
                 caption={ownerFieldPhotos.truck.caption}
                 sizes="(max-width: 800px) 100vw, 46vw"
               />
-              <FieldPhoto
-                src={ownerFieldPhotos.atWork.src}
-                alt={ownerFieldPhotos.atWork.alt}
-                caption={ownerFieldPhotos.atWork.caption}
-                sizes="(max-width: 800px) 100vw, 46vw"
-              />
+              <FieldWorkMedia />
             </div>
           </section>
         </ScrollReveal>

@@ -1,6 +1,22 @@
-/** Owner-supplied field photos. Dimensions match the exported WebP files. */
+/** Owner-supplied field photos and the local job video. Dimensions match the exported files. */
 
 export const fieldImageSize = { width: 1200, height: 1600 } as const;
+
+export const fieldWorkVideo = {
+  src: "/field/owner-yard-work.mp4",
+  poster: "/field/owner-yard-work-poster.webp",
+  type: "video/mp4",
+  width: 720,
+  height: 1280,
+  durationSeconds: 5,
+  durationIso: "PT5S",
+  uploadDate: "2026-08-31",
+  title: "The Bug Dude treating a Fresno-area front yard",
+  description:
+    "The Bug Dude applies exterior pest control in a residential front yard, walking the lawn with a backpack sprayer.",
+  caption: "Front-yard service with a backpack sprayer.",
+  alt: "The Bug Dude walking a front lawn toward a house while wearing a backpack sprayer",
+} as const;
 
 export const ownerFieldPhotos = {
   truck: {

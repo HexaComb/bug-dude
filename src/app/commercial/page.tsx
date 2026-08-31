@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { FieldPhoto } from "@/components/field-photo";
+import { FieldWorkMedia } from "@/components/field-work-media";
 import { JsonLd } from "@/components/json-ld";
 import { ownerFieldPhotos } from "@/lib/field-media";
 import {
@@ -58,12 +59,7 @@ export default function CommercialPage() {
           caption={ownerFieldPhotos.truck.caption}
           sizes="(max-width: 800px) 100vw, 46vw"
         />
-        <FieldPhoto
-          src={ownerFieldPhotos.atWork.src}
-          alt={ownerFieldPhotos.atWork.alt}
-          caption={ownerFieldPhotos.atWork.caption}
-          sizes="(max-width: 800px) 100vw, 46vw"
-        />
+        <FieldWorkMedia />
       </div>
       <h2 className="content-subhead">Properties we often hear from</h2>
       <div className="guide-list">

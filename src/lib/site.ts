@@ -1,5 +1,7 @@
 /** Shared public business facts for SEO, metadata, and JSON-LD. Do not invent address, email, reviews, or credentials here. */
 
+import { fieldWorkVideo } from "@/lib/field-media";
+
 export const siteConfig = {
   name: "The Bug Dude Pest Control",
   shortName: "The Bug Dude",
@@ -192,7 +194,9 @@ export function buildLocalBusinessJsonLd(): JsonLd {
       absoluteUrl(siteConfig.logoPath),
       absoluteUrl("/field/owner-truck.webp"),
       absoluteUrl("/field/owner-at-work.webp"),
+      absoluteUrl("/field/owner-yard-work-poster.webp"),
     ],
+    video: { "@id": `${url}/#field-video` },
     logo: absoluteUrl(siteConfig.logoPath),
     address: {
       "@type": "PostalAddress",
@@ -326,5 +330,25 @@ export function buildFaqJsonLd(
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function buildFieldVideoJsonLd(): JsonLd {
+  const url = absoluteUrl("/");
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "@id": `${url}/#field-video`,
+    name: fieldWorkVideo.title,
+    description: fieldWorkVideo.description,
+    thumbnailUrl: absoluteUrl(fieldWorkVideo.poster),
+    contentUrl: absoluteUrl(fieldWorkVideo.src),
+    embedUrl: `${url}#from-the-field`,
+    uploadDate: fieldWorkVideo.uploadDate,
+    duration: fieldWorkVideo.durationIso,
+    width: fieldWorkVideo.width,
+    height: fieldWorkVideo.height,
+    inLanguage: "en-US",
+    publisher: { "@id": `${url}/#business` },
   };
 }
