@@ -5,8 +5,11 @@ import type { ReactNode } from "react";
 import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide-react";
 import { EstimateForm } from "@/components/estimate-form";
 import { CopyPhoneCta } from "@/components/copy-phone-cta";
+import { FieldPhoto } from "@/components/field-photo";
+import { FieldWorkMedia } from "@/components/field-work-media";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { JsonLd } from "@/components/json-ld";
+import { ownerFieldPhotos, pestFieldPhotos, fieldWorkVideo } from "@/lib/field-media";
 import {
   absoluteUrl,
   buildFaqJsonLd,
@@ -22,6 +25,14 @@ export const metadata: Metadata = {
     url: absoluteUrl("/"),
     title: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
     description: siteConfig.pages.home.description,
+    videos: [
+      {
+        url: absoluteUrl(fieldWorkVideo.src),
+        type: fieldWorkVideo.type,
+        width: fieldWorkVideo.width,
+        height: fieldWorkVideo.height,
+      },
+    ],
   },
 };
 
@@ -94,6 +105,7 @@ export default function Home() {
           </Link>
           <div className="nav-links">
             <a href="#commercial">Commercial</a>
+            <a href="#from-the-field">The work</a>
             <a href="#services">Services</a>
             <a href="#faq">FAQ</a>
             <a href="#estimate">Request an estimate</a>
@@ -203,6 +215,26 @@ export default function Home() {
           </section>
         </ScrollReveal>
         <ScrollReveal>
+          <section className="section field-band" id="from-the-field">
+            <div className="field-intro">
+              <p className="eyebrow">From the truck</p>
+              <h2>This is the work.</h2>
+              <p className="section-intro">
+                You’ll see the Bug Dude truck on residential streets and at the properties people call about. The clip and photos here are from real stops—the owner on a job, and pests found around homes.
+              </p>
+            </div>
+            <div className="field-split">
+              <FieldPhoto
+                src={ownerFieldPhotos.truck.src}
+                alt={ownerFieldPhotos.truck.alt}
+                caption={ownerFieldPhotos.truck.caption}
+                sizes="(max-width: 800px) 100vw, 46vw"
+              />
+              <FieldWorkMedia />
+            </div>
+          </section>
+        </ScrollReveal>
+        <ScrollReveal>
           <section className="section" id="services">
             <div className="services-layout">
               <div>
@@ -245,6 +277,20 @@ export default function Home() {
               <p>
                 Ants, roaches, spiders, mosquitoes, fleas and ticks, earwigs, bed bugs, and rodents—at homes and businesses around Fresno.
               </p>
+              <p className="section-copy">
+                These photos are from real houses: spiders on walls, egg sacs in cover, and cockroach activity in kitchens and around vents. If it looks like this at your place, call or send a note.
+              </p>
+              <div className="pest-photo-grid" aria-label="Pests photographed on service stops">
+                {pestFieldPhotos.map((photo) => (
+                  <FieldPhoto
+                    key={photo.src}
+                    src={photo.src}
+                    alt={photo.alt}
+                    caption={photo.caption}
+                    sizes="(max-width: 800px) 50vw, 360px"
+                  />
+                ))}
+              </div>
               <ul className="pest-icon-grid" aria-label="Common pests The Bug Dude treats">
                 {featuredPests.map((pest) => (
                   <li key={pest.name}>
@@ -276,7 +322,7 @@ export default function Home() {
           <section className="section content-band" id="residential">
             <h2>Homes in Fresno.</h2>
             <p className="section-intro">
-              When pests take over the kitchen, garage, yard, or bedroom. Don't wait, call us.
+              When pests take over the kitchen, garage, yard, or bedroom. Do not wait—call us.
             </p>
             <div className="content-columns">
               <p className="section-copy">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FieldPhoto } from "@/components/field-photo";
 import { JsonLd } from "@/components/json-ld";
+import { pestFieldPhotos } from "@/lib/field-media";
 import {
   absoluteUrl,
   buildBreadcrumbJsonLd,
@@ -52,6 +54,21 @@ export default function ServicesPage() {
         Looking for help with ants, roaches, spiders, bed bugs, or rodents? Check that we cover your pest below, then request an estimate or call{" "}
         <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a>.
       </p>
+      <h2 className="content-subhead">What this looks like on a job</h2>
+      <p className="section-copy">
+        Photos from homes we service—spiders, egg sacs, and cockroach activity. Use them as a check against what you’re seeing, then tell us the details.
+      </p>
+      <div className="pest-photo-grid">
+        {pestFieldPhotos.map((photo) => (
+          <FieldPhoto
+            key={photo.src}
+            src={photo.src}
+            alt={photo.alt}
+            caption={photo.caption}
+            sizes="(max-width: 800px) 50vw, 360px"
+          />
+        ))}
+      </div>
       <h2 className="content-subhead">Pests we help with</h2>
       <div className="guide-list">
         {siteConfig.pestGuides.map((pest) => (

@@ -1,0 +1,37 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import { fieldWorkVideo } from "@/lib/field-media";
+
+export function FieldWorkMedia() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      video.pause();
+    }
+  }, []);
+
+  return (
+    <figure className="field-photo">
+      <div className="field-photo-frame">
+        <video
+          ref={videoRef}
+          controls
+          muted
+          loop
+          autoPlay
+          playsInline
+          preload="metadata"
+          poster={fieldWorkVideo.poster}
+          aria-label={fieldWorkVideo.alt}
+        >
+          <source src={fieldWorkVideo.src} type={fieldWorkVideo.type} />
+        </video>
+      </div>
+      <figcaption>{fieldWorkVideo.caption}</figcaption>
+    </figure>
+  );
+}
