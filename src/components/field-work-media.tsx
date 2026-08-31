@@ -25,8 +25,6 @@ export function FieldWorkMedia() {
         playsInline
         preload="metadata"
         poster={fieldWorkVideo.poster}
-        width={fieldWorkVideo.width}
-        height={fieldWorkVideo.height}
         aria-label={fieldWorkVideo.alt}
       >
         <source src={fieldWorkVideo.src} type={fieldWorkVideo.type} />
