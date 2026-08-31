@@ -318,7 +318,7 @@ export default function Home() {
           <section className="section content-band" id="residential">
             <h2>Homes in Fresno.</h2>
             <p className="section-intro">
-              When pests take over the kitchen, garage, yard, or bedroom. Don't wait, call us.
+              When pests take over the kitchen, garage, yard, or bedroom. Do not wait—call us.
             </p>
             <div className="content-columns">
               <p className="section-copy">
