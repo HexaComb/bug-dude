@@ -188,7 +188,11 @@ export function buildLocalBusinessJsonLd(): JsonLd {
     description: siteConfig.description,
     url,
     telephone: siteConfig.phoneE164,
-    image: absoluteUrl(siteConfig.logoPath),
+    image: [
+      absoluteUrl(siteConfig.logoPath),
+      absoluteUrl("/field/owner-truck.webp"),
+      absoluteUrl("/field/owner-at-work.webp"),
+    ],
     logo: absoluteUrl(siteConfig.logoPath),
     address: {
       "@type": "PostalAddress",

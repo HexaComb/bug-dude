@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FieldPhoto } from "@/components/field-photo";
 import { JsonLd } from "@/components/json-ld";
+import { ownerFieldPhotos } from "@/lib/field-media";
 import {
   absoluteUrl,
   buildBreadcrumbJsonLd,
@@ -49,6 +51,20 @@ export default function CommercialPage() {
       <p className="section-copy">
         Facilities managers, owners, and property managers usually call when ants, roaches, spiders, rodents, or other pests affect staff, tenants, or customers. Keep it simple: describe the site and the issue, and we’ll take it from there.
       </p>
+      <div className="field-split field-split-page">
+        <FieldPhoto
+          src={ownerFieldPhotos.truck.src}
+          alt={ownerFieldPhotos.truck.alt}
+          caption={ownerFieldPhotos.truck.caption}
+          sizes="(max-width: 800px) 100vw, 46vw"
+        />
+        <FieldPhoto
+          src={ownerFieldPhotos.atWork.src}
+          alt={ownerFieldPhotos.atWork.alt}
+          caption={ownerFieldPhotos.atWork.caption}
+          sizes="(max-width: 800px) 100vw, 46vw"
+        />
+      </div>
       <h2 className="content-subhead">Properties we often hear from</h2>
       <div className="guide-list">
         {siteConfig.commercialGuides.map((guide) => (
