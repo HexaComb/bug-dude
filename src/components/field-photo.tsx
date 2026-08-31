@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { fieldImageSize } from "@/lib/field-media";
 
 type FieldPhotoProps = {
   src: string;
@@ -18,14 +17,15 @@ export function FieldPhoto({
 }: FieldPhotoProps) {
   return (
     <figure className="field-photo">
-      <Image
-        src={src}
-        alt={alt}
-        width={fieldImageSize.width}
-        height={fieldImageSize.height}
-        sizes={sizes}
-        preload={preload}
-      />
+      <div className="field-photo-frame">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          preload={preload}
+        />
+      </div>
       {caption ? <figcaption>{caption}</figcaption> : null}
     </figure>
   );

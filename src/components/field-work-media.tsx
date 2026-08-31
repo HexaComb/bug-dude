@@ -16,19 +16,21 @@ export function FieldWorkMedia() {
 
   return (
     <figure className="field-photo">
-      <video
-        ref={videoRef}
-        controls
-        muted
-        loop
-        autoPlay
-        playsInline
-        preload="metadata"
-        poster={fieldWorkVideo.poster}
-        aria-label={fieldWorkVideo.alt}
-      >
-        <source src={fieldWorkVideo.src} type={fieldWorkVideo.type} />
-      </video>
+      <div className="field-photo-frame">
+        <video
+          ref={videoRef}
+          controls
+          muted
+          loop
+          autoPlay
+          playsInline
+          preload="metadata"
+          poster={fieldWorkVideo.poster}
+          aria-label={fieldWorkVideo.alt}
+        >
+          <source src={fieldWorkVideo.src} type={fieldWorkVideo.type} />
+        </video>
+      </div>
       <figcaption>{fieldWorkVideo.caption}</figcaption>
     </figure>
   );
