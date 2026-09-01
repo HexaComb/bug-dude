@@ -6,10 +6,11 @@ import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide
 import { EstimateForm } from "@/components/estimate-form";
 import { CopyPhoneCta } from "@/components/copy-phone-cta";
 import { FieldPhoto } from "@/components/field-photo";
+import { FieldPhotoCarousel } from "@/components/field-photo-carousel";
 import { FieldWorkMedia } from "@/components/field-work-media";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { JsonLd } from "@/components/json-ld";
-import { ownerFieldPhotos, pestFieldPhotos, fieldWorkVideo } from "@/lib/field-media";
+import { ownerFieldPhotos, pestFieldPhotos, pestFieldPhotoIntro, fieldWorkVideo } from "@/lib/field-media";
 import {
   absoluteUrl,
   buildFaqJsonLd,
@@ -123,7 +124,7 @@ export default function Home() {
                 Pest control for Fresno and Madera Counties.
               </h1>
               <p>
-                Help from <a className="link-underline" href="https://maps.app.goo.gl/qN2BHRUq56qPzWq46" target="_blank" rel="noopener noreferrer">your neighbor</a> with commercial properties, rentals, and homes. Call or text, tell us what you’re seeing, and we’ll talk through an estimate.
+                Help from <a className="link-underline" href="https://maps.app.goo.gl/qN2BHRUq56qPzWq46" target="_blank" rel="noopener noreferrer">your neighbor</a> with commercial properties, rentals, and homes. Call or text with what you&apos;re seeing and we&apos;ll put together an estimate.
               </p>
               <div className="hero-conversion">
                 <div className="action-row">
@@ -137,7 +138,7 @@ export default function Home() {
                   href={bbbProfileHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="See reviews on The Bug Dude Pest Control BBB profile — BBB Accredited Business with an A+ rating"
+                  aria-label="See reviews on The Bug Dude Pest Control BBB profile, BBB Accredited Business with an A+ rating"
                 >
                   <img src={bbbSealSrc} alt="BBB Accredited Business" width="116" height="44" />
                   <span className="bbb-rating">
@@ -187,10 +188,10 @@ export default function Home() {
             <div className="section">
               <h2>For Fresno.</h2>
               <p className="section-intro">
-                Offices, restaurants, rentals, warehouses—if pests are showing up at a property you manage, we’ll look at the situation with you. No sales pitch. Just a clear conversation about what’s going on and what to do next.
+                Offices, restaurants, rentals, warehouses. If you manage the property and pests showed up, call us. No pitch.
               </p>
               <p className="section-copy section-copy-light">
-                Property managers and business owners usually call when ants hit a break room, roaches show up in a kitchen, spiders keep coming back in a storefront, or rodents become a facilities problem. Tell us the property type and what you’re seeing. We’ll talk through an estimate and scheduling from there.
+                Property managers usually call when ants hit a break room, roaches turn up in a kitchen, spiders keep coming back in a storefront, or rodents become a facilities headache. Tell us the property type and what you saw. We&apos;ll work out an estimate and a time.
               </p>
               <div className="property-list">
                 <div>
@@ -220,7 +221,7 @@ export default function Home() {
               <p className="eyebrow">From the truck</p>
               <h2>This is the work.</h2>
               <p className="section-intro">
-                You’ll see the Bug Dude truck on residential streets and at the properties people call about. The clip and photos here are from real stops—the owner on a job, and pests found around homes.
+                You&apos;ll see the Bug Dude truck on residential streets and at the jobs people call about. The clip and photos here are from real stops.
               </p>
             </div>
             <div className="field-split">
@@ -240,10 +241,10 @@ export default function Home() {
               <div>
                 <h2>Get rid of common pests from the 559.</h2>
                 <p className="section-intro">
-                  Home or business—we help with the pests people call about most. Tell us what you’re dealing with and we’ll follow up.
+                  Home or business. Ants, roaches, spiders, bed bugs, rodents, and the rest. Tell us what you&apos;re dealing with and we&apos;ll call back.
                 </p>
                 <p className="section-copy">
-                  Ants, roaches, spiders, bed bugs, rodents, and more. One-time service is fine if you don’t want a long contract. Share a few details and we’ll get back to you with next steps.
+                  One-time visits are fine if you don&apos;t want a contract. A few details in the form is enough to get started.
                 </p>
                 <Link className="button button-plain" href="/services">
                   See pest services <ArrowRight size={18} />
@@ -258,12 +259,12 @@ export default function Home() {
                 <Service
                   icon={<Rat />}
                   title="Rodents"
-                  text="Tell us what you’re seeing around your home, rental, or commercial property."
+                  text="Mice and rats at homes, rentals, and commercial sites."
                 />
                 <Service
                   icon={<ClipboardCheck />}
-                  title="Flexible options"
-                  text="One-time service and no-contract options are available."
+                  title="No contract required"
+                  text="One-time visits and no-contract plans both work."
                 />
                 <Service
                   icon={<ShieldCheck />}
@@ -275,22 +276,14 @@ export default function Home() {
             <div className="pest-keyword-block">
               <h3>What we help with in Fresno</h3>
               <p>
-                Ants, roaches, spiders, mosquitoes, fleas and ticks, earwigs, bed bugs, and rodents—at homes and businesses around Fresno.
+                Ants, roaches, spiders, mosquitoes, fleas and ticks, earwigs, bed bugs, and rodents at Fresno homes and businesses.
               </p>
-              <p className="section-copy">
-                These photos are from real houses: spiders on walls, egg sacs in cover, and cockroach activity in kitchens and around vents. If it looks like this at your place, call or send a note.
-              </p>
-              <div className="pest-photo-grid" aria-label="Pests photographed on service stops">
-                {pestFieldPhotos.map((photo) => (
-                  <FieldPhoto
-                    key={photo.src}
-                    src={photo.src}
-                    alt={photo.alt}
-                    caption={photo.caption}
-                    sizes="(max-width: 800px) 50vw, 360px"
-                  />
-                ))}
-              </div>
+              <h3 className="content-subhead">{pestFieldPhotoIntro.heading}</h3>
+              <p className="section-copy">{pestFieldPhotoIntro.copy}</p>
+              <FieldPhotoCarousel
+                photos={pestFieldPhotos}
+                ariaLabel="Pests photographed on service stops"
+              />
               <ul className="pest-icon-grid" aria-label="Common pests The Bug Dude treats">
                 {featuredPests.map((pest) => (
                   <li key={pest.name}>
@@ -322,14 +315,14 @@ export default function Home() {
           <section className="section content-band" id="residential">
             <h2>Homes in Fresno.</h2>
             <p className="section-intro">
-              When pests take over the kitchen, garage, yard, or bedroom. Do not wait—call us.
+              Kitchen, garage, yard, bedroom. If pests moved in, call us.
             </p>
             <div className="content-columns">
               <p className="section-copy">
-                Ants on the counters, spiders in the corners, mosquitoes outside, or signs of rodents—send a short estimate request. Note the pest and where it’s showing up: inside, outside, or both.
+                Ants on the counters, spiders in the corners, mosquitoes outside, rodent signs in the garage. Send a short estimate request. Mention the pest and whether it&apos;s inside, outside, or both.
               </p>
               <p className="section-copy">
-                Prefer to talk? Call {phone} during {siteConfig.hours.display}. Same-day may be possible when scheduling allows. One-time service is available if you don’t want a long-term plan.
+                Prefer to talk? Call {phone} during {siteConfig.hours.display}. Same-day sometimes works if the schedule allows. One-time visits are fine if you don&apos;t want a long-term plan.
               </p>
             </div>
           </section>
@@ -371,20 +364,20 @@ export default function Home() {
             <div className="section">
               <h2>How it works.</h2>
               <p className="section-intro section-intro-light">
-                Tell us what’s happening, ask for an estimate, and we’ll help you get service lined up—home or business.
+                Describe the problem, ask for an estimate, pick a time. Home or business.
               </p>
               <ol className="process-list">
                 <li>
                   <strong>Describe the issue</strong>
-                  <span>Share the property type and the pests you’re seeing.</span>
+                  <span>Property type and what pests you saw.</span>
                 </li>
                 <li>
                   <strong>Request an estimate</strong>
-                  <span>Use the form or call {phone}. We’ll follow up on timing and options.</span>
+                  <span>Use the form or call {phone}. We&apos;ll follow up with timing and price.</span>
                 </li>
                 <li>
-                  <strong>Choose what fits</strong>
-                  <span>One-time and no-contract options are available. If you’re not satisfied, we’ll come back at no charge.</span>
+                  <strong>Pick what works</strong>
+                  <span>One-time visits and no-contract plans are both fine. Not happy? We come back at no charge.</span>
                 </li>
               </ol>
             </div>
@@ -394,7 +387,7 @@ export default function Home() {
           <section className="section" id="faq">
             <h2>Common questions.</h2>
             <p className="section-intro">
-              Short answers about commercial and home service, same-day timing, and flexible options.
+              Commercial and home service, same-day timing, contracts.
             </p>
             <div className="faq-list">
               {siteConfig.faqs.map((faq) => (
@@ -410,12 +403,12 @@ export default function Home() {
           <section className="quote-section" id="estimate">
             <div className="section">
               <div>
-                <h2>Let’s look at what’s going on.</h2>
+                <h2>Let&apos;s look at what&apos;s going on.</h2>
                 <p className="section-intro" style={{ color: "#79301e" }}>
-                  Call or text for a free estimate—home, rental, restaurant, office, or workspace. Hours: {siteConfig.hours.display}.
+                  Call or text for a free estimate. Home, rental, restaurant, office, or workspace. Hours: {siteConfig.hours.display}.
                 </p>
                 <p className="section-copy" style={{ color: "#79301e" }}>
-                  If you know the pest—ants, roaches, spiders, bed bugs, rodents, or something else—mention it. Note whether it’s a business or a home. That helps us get back to you sooner.
+                  Name the pest if you know it. Ants, roaches, spiders, bed bugs, rodents, or something else. Say if it&apos;s a business or a home. That gets you a faster callback.
                 </p>
                 <div className="action-row">
                   <a className="button button-plain" href={phoneHref}>

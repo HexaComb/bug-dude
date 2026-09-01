@@ -15,12 +15,12 @@ export function EstimateForm() {
     const body = await result.json().catch(() => ({}));
     if (!result.ok) {
       setStatus("error");
-      setMessage(body.error ?? "We couldn’t send that request. Please call us at 559-321-6230.");
+      setMessage(body.error ?? "We couldn't send that request. Please call us at 559-321-6230.");
       return;
     }
     form.reset();
     setStatus("success");
-    setMessage("Thanks—we got your note. We’ll be in touch soon.");
+    setMessage("Thanks. We got your note and will call back soon.");
   }
 
   return <form className="estimate-form" onSubmit={submit}>
