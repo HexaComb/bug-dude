@@ -7,7 +7,7 @@ export const siteConfig = {
   shortName: "The Bug Dude",
   tagline: "Pest control for Fresno businesses and homes",
   description:
-    "Local pest control in Fresno County and Madera County for businesses, rentals, and homes. Call or send a note—we’ll look at what’s going on and talk through next steps.",
+    "Pest control in Fresno and Madera counties for businesses, rentals, and homes. Call or leave a note about what you're seeing.",
   phoneDisplay: "559-321-6230",
   phoneE164: "+15593216230",
   phoneHref: "tel:+15593216230",
@@ -19,7 +19,7 @@ export const siteConfig = {
     days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as const,
     opens: "07:30",
     closes: "16:30",
-    display: "Monday–Friday, 7:30 AM–4:30 PM",
+    display: "Monday through Friday, 7:30 AM to 4:30 PM",
   },
   pests: [
     "spiders",
@@ -42,87 +42,79 @@ export const siteConfig = {
   pestGuides: [
     {
       name: "Spiders",
-      summary:
-        "When you see webs or spiders in corners, closets, or storage, call us for help with spiders.",
+      summary: "Webs in corners, closets, or storage usually mean spiders.",
     },
     {
       name: "Ants",
-      summary:
-        "When you see trails or ants in the kitchen or break room, call us for help with ants.",
+      summary: "Trails in the kitchen or break room usually mean ants.",
     },
     {
       name: "Roaches",
-      summary:
-        "When you see them at night or notice droppings, call us for help with roaches.",
+      summary: "Night sightings or droppings behind appliances often mean roaches.",
     },
     {
       name: "Mosquitoes",
-      summary:
-        "When you get bites outdoors or see them swarming near standing water or the yard, call us for help with mosquitoes.",
+      summary: "Bites outside, or swarms near standing water or the yard, usually mean mosquitoes.",
     },
     {
       name: "Fleas & ticks",
-      summary:
-        "When pets are scratching or you’re getting bites near yard or pet areas, call us for help with fleas & ticks.",
+      summary: "A scratching pet or bites near the yard often mean fleas or ticks.",
     },
     {
       name: "Earwigs",
-      summary:
-        "When you see them in the garage or around damp ground-level areas, call us for help with earwigs.",
+      summary: "Earwigs often show up in the garage or other damp spots near the ground.",
     },
     {
       name: "Bed bugs",
-      summary:
-        "When you notice bites or blood spots on sheets, call us for help with bed bugs.",
+      summary: "Bites or blood spots on sheets can mean bed bugs.",
     },
     {
       name: "Rodents",
-      summary:
-        "When you see droppings, nesting, or scratching and entry signs, call us for help with rodents.",
+      summary: "Droppings, nesting material, scratching, or chew marks often mean rodents.",
     },
   ] as const,
   commercialGuides: [
     {
       name: "Offices & storefronts",
       summary:
-        "Ants, spiders, and other pests in customer areas and staff spaces. We’ll look at what’s going on and talk through options.",
+        "Ants, spiders, and other pests in customer areas or back rooms. Tell us what you saw and where.",
     },
     {
       name: "Restaurants & food service",
       summary:
-        "Kitchen and dining-area pest issues. Call or send details so we can discuss timing and an estimate.",
+        "Kitchen or dining-area pests. Call or send details so we can talk timing and price.",
     },
     {
       name: "Rental & apartment properties",
       summary:
-        "For property managers dealing with unit turnovers, tenant reports, or pests across a few buildings.",
+        "Unit turnovers, tenant complaints, or pests across a few buildings.",
     },
     {
       name: "Warehouses & workspaces",
       summary:
-        "Pest activity around receiving, storage, and staff areas. Simple intake—no long sales pitch.",
+        "Pests near receiving docks, storage, or break areas. Short intake, no pitch.",
     },
   ] as const,
   faqs: [
     {
       question: "Do you offer commercial pest control in Fresno?",
       answer:
-        "Yes. We work with Fresno-area businesses, restaurants, rentals, offices, and workspaces. Tell us what you’re seeing and we’ll talk through next steps.",
+        "Yes. Restaurants, rentals, offices, and other Fresno-area businesses. Tell us what you're seeing.",
     },
     {
       question: "Do you also handle residential pest control?",
       answer:
-        "Yes. We help Fresno homeowners with common pests—spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more.",
+        "Yes. Spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and the usual suspects around Fresno homes.",
     },
     {
       question: "Can I get same-day pest control service?",
       answer:
-        "Sometimes, when we can make it work. Call 559-321-6230 during business hours and we’ll check timing for your place.",
+        "Sometimes, if the schedule allows. Call 559-321-6230 during business hours and we'll check.",
     },
     {
       question: "Do I have to sign a long-term contract?",
       answer:
-        "No. One-time service and no-contract options are available. You can choose what fits.",
+        "No. One-time visits and no-contract options are both fine.",
     },
     {
       question: "What if I’m not satisfied after service?",
@@ -132,7 +124,7 @@ export const siteConfig = {
     {
       question: "What are your hours?",
       answer:
-        "Monday–Friday, 7:30 AM–4:30 PM. Call 559-321-6230 or request an estimate online anytime.",
+        "Monday through Friday, 7:30 AM to 4:30 PM. Call 559-321-6230 or request an estimate online anytime.",
     },
   ] as const,
   logoPath: "/bug-dude-logo.png",
@@ -147,7 +139,7 @@ export const siteConfig = {
       path: "/commercial",
       title: "Commercial Pest Control in Fresno",
       description:
-        "Commercial pest control for Fresno offices, restaurants, rentals, and workspaces. Call or request an estimate to start the conversation.",
+        "Commercial pest control for Fresno offices, restaurants, rentals, and workspaces. Call or request an estimate.",
     },
     services: {
       path: "/services",

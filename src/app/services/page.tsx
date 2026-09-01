@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FieldPhoto } from "@/components/field-photo";
+import { FieldPhotoCarousel } from "@/components/field-photo-carousel";
 import { JsonLd } from "@/components/json-ld";
-import { pestFieldPhotos } from "@/lib/field-media";
+import { pestFieldPhotos, pestFieldPhotoIntro } from "@/lib/field-media";
 import {
   absoluteUrl,
   buildBreadcrumbJsonLd,
@@ -48,27 +48,18 @@ export default function ServicesPage() {
         Pest control for Fresno homes and properties.
       </h1>
       <p className="section-intro">
-        The Bug Dude helps with common household and commercial pests around Fresno. Tell us what you’re seeing—home or business—and we’ll follow up with estimate options.
+        The Bug Dude handles common household and commercial pests around Fresno. Tell us what you saw, home or business, and we&apos;ll follow up with estimate options.
       </p>
       <p className="section-copy">
-        Looking for help with ants, roaches, spiders, bed bugs, or rodents? Check that we cover your pest below, then request an estimate or call{" "}
+        Ants, roaches, spiders, bed bugs, or rodents? Check the list below, then request an estimate or call{" "}
         <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a>.
       </p>
-      <h2 className="content-subhead">What this looks like on a job</h2>
-      <p className="section-copy">
-        Photos from homes we service—spiders, egg sacs, and cockroach activity. Use them as a check against what you’re seeing, then tell us the details.
-      </p>
-      <div className="pest-photo-grid">
-        {pestFieldPhotos.map((photo) => (
-          <FieldPhoto
-            key={photo.src}
-            src={photo.src}
-            alt={photo.alt}
-            caption={photo.caption}
-            sizes="(max-width: 800px) 50vw, 360px"
-          />
-        ))}
-      </div>
+      <h2 className="content-subhead">{pestFieldPhotoIntro.heading}</h2>
+      <p className="section-copy">{pestFieldPhotoIntro.copy}</p>
+      <FieldPhotoCarousel
+        photos={pestFieldPhotos}
+        ariaLabel="Pests photographed on service stops"
+      />
       <h2 className="content-subhead">Pests we help with</h2>
       <div className="guide-list">
         {siteConfig.pestGuides.map((pest) => (
@@ -78,9 +69,9 @@ export default function ServicesPage() {
           </article>
         ))}
       </div>
-      <h2 className="content-subhead">Flexible service options</h2>
+      <h2 className="content-subhead">Service options</h2>
       <p className="section-copy">
-        One-time and no-contract options are available. Same-day may be possible when scheduling allows. If you’re not satisfied, we’ll come back at no charge. Hours: {siteConfig.hours.display}.
+        One-time visits and no-contract plans are both fine. Same-day sometimes works if the schedule allows. Not happy? We come back at no charge. Hours: {siteConfig.hours.display}.
       </p>
       <h2 className="content-subhead">Common questions</h2>
       <div className="faq-list">

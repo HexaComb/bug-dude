@@ -22,12 +22,12 @@ export const ownerFieldPhotos = {
   truck: {
     src: "/field/owner-truck.webp",
     alt: "The Bug Dude standing beside the branded pest-control truck on a residential street",
-    caption: "The truck you’ll see around Fresno-area homes and businesses.",
+    caption: "The truck you see around Fresno homes and businesses.",
   },
   atWork: {
     src: "/field/owner-at-work.webp",
     alt: "The Bug Dude using a long pole duster on the upper exterior wall of a stucco home",
-    caption: "Exterior work—clearing webs and treating the places pests actually use.",
+    caption: "Clearing webs and treating the spots pests actually use.",
   },
 } as const;
 
@@ -53,9 +53,14 @@ export const pestFieldPhotos = [
     caption: "German cockroaches near a vent",
   },
   {
-    src: "/field/cockroach-kitchen.webp",
-    alt: "Cockroaches and droppings in the corner of a tiled kitchen floor",
-    caption: "Cockroach activity in a kitchen corner",
+    src: "/field/roach-droppings-behind-appliance.webp",
+    alt: "Cockroach droppings along a tile floor behind a kitchen appliance",
+    caption: "Droppings behind appliances",
+  },
+  {
+    src: "/field/monitoring-trap-cockroaches.webp",
+    alt: "Sticky monitoring trap with captured cockroaches",
+    caption: "Monitoring trap activity",
   },
   {
     src: "/field/insects-doorway.webp",
@@ -63,3 +68,9 @@ export const pestFieldPhotos = [
     caption: "Insects at a door threshold",
   },
 ] as const;
+
+export const pestFieldPhotoIntro = {
+  heading: "Not sure what you're looking at?",
+  copy:
+    "These are from real jobs around Fresno. Spiders on stucco, egg sacs in cover, droppings behind appliances, traps that caught roaches overnight. If it matches what you see, call or send a note.",
+} as const;
