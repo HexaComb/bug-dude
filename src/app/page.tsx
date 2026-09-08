@@ -26,16 +26,18 @@ import {
   absoluteUrl,
   buildFaqJsonLd,
   buildWebPageJsonLd,
+  openGraphSite,
   siteConfig,
 } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: { absolute: `${siteConfig.name} | ${siteConfig.pages.home.title}` },
+  title: { absolute: siteConfig.pages.home.title },
   description: siteConfig.pages.home.description,
   alternates: { canonical: absoluteUrl("/") },
   openGraph: {
+    ...openGraphSite,
     url: absoluteUrl("/"),
-    title: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
+    title: siteConfig.pages.home.title,
     description: siteConfig.pages.home.description,
     videos: [
       {
@@ -111,7 +113,7 @@ export default function Home() {
         data={[
           buildWebPageJsonLd({
             path: "/",
-            title: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
+            title: siteConfig.pages.home.title,
             description: siteConfig.pages.home.description,
           }),
           buildFaqJsonLd(),
