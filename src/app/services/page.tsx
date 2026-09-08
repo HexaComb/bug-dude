@@ -8,18 +8,25 @@ import {
   buildBreadcrumbJsonLd,
   buildFaqJsonLd,
   buildWebPageJsonLd,
+  openGraphSite,
   siteConfig,
 } from "@/lib/site";
 
 const page = siteConfig.pages.services;
+const documentTitle = `${page.title} | ${siteConfig.shortName}`;
 
 export const metadata: Metadata = {
   title: page.title,
   description: page.description,
   alternates: { canonical: absoluteUrl(page.path) },
   openGraph: {
+    ...openGraphSite,
     url: absoluteUrl(page.path),
-    title: `${page.title} | ${siteConfig.name}`,
+    title: documentTitle,
+    description: page.description,
+  },
+  twitter: {
+    title: documentTitle,
     description: page.description,
   },
 };
@@ -31,7 +38,7 @@ export default function ServicesPage() {
         data={[
           buildWebPageJsonLd({
             path: page.path,
-            title: `${page.title} | ${siteConfig.name}`,
+            title: documentTitle,
             description: page.description,
           }),
           buildBreadcrumbJsonLd([

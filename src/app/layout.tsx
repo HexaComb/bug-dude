@@ -8,6 +8,7 @@ import {
   buildLocalBusinessJsonLd,
   buildWebSiteJsonLd,
   getSiteUrl,
+  openGraphSite,
   siteConfig,
 } from "@/lib/site";
 import "./globals.css";
@@ -15,8 +16,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
   title: {
-    default: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
-    template: `%s | ${siteConfig.name}`,
+    default: siteConfig.pages.home.title,
+    template: `%s | ${siteConfig.shortName}`,
   },
   description: siteConfig.pages.home.description,
   applicationName: siteConfig.name,
@@ -52,16 +53,14 @@ export const metadata: Metadata = {
     apple: "/bug-dude-logo.png",
   },
   openGraph: {
-    type: "website",
-    locale: siteConfig.locale,
+    ...openGraphSite,
     url: absoluteUrl("/"),
-    siteName: siteConfig.name,
-    title: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
+    title: siteConfig.pages.home.title,
     description: siteConfig.pages.home.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | ${siteConfig.pages.home.title}`,
+    title: siteConfig.pages.home.title,
     description: siteConfig.pages.home.description,
   },
   robots: {

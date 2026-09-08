@@ -131,9 +131,9 @@ export const siteConfig = {
   pages: {
     home: {
       path: "/",
-      title: "Fresno Commercial & Residential Pest Control",
+      title: "The Bug Dude | Fresno Pest Control",
       description:
-        "The Bug Dude Pest Control helps Fresno businesses, rentals, and homes with common pests. Call 559-321-6230 or request an estimate.",
+        "Pest control for Fresno businesses, rentals, and homes. Call 559-321-6230 or request an estimate.",
     },
     commercial: {
       path: "/commercial",
@@ -149,6 +149,13 @@ export const siteConfig = {
     },
   },
 } as const;
+
+/** Shared Open Graph fields. Child `openGraph` objects replace the parent, so pages must spread this. */
+export const openGraphSite = {
+  type: "website" as const,
+  locale: siteConfig.locale,
+  siteName: siteConfig.name,
+};
 
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();
