@@ -46,11 +46,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: absoluteUrl("/"),
   },
-  icons: {
-    icon: [{ url: "/bug-dude-logo.png", type: "image/png" }],
-    shortcut: "/bug-dude-logo.png",
-    apple: "/bug-dude-logo.png",
-  },
   openGraph: {
     type: "website",
     locale: siteConfig.locale,
