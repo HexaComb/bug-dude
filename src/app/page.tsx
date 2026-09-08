@@ -2,7 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { ArrowRight, Bug, ClipboardCheck, Phone, Rat, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Bug,
+  Building2,
+  ClipboardCheck,
+  Phone,
+  Rat,
+  ShieldCheck,
+  Store,
+  UtensilsCrossed,
+  Warehouse,
+} from "lucide-react";
 import { EstimateForm } from "@/components/estimate-form";
 import { CopyPhoneCta } from "@/components/copy-phone-cta";
 import { FieldPhoto } from "@/components/field-photo";
@@ -43,6 +54,13 @@ const bbbProfileHref = "https://www.bbb.org/us/ca/clovis/profile/pest-control/th
 const bbbSealSrc = "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg?tx=w_175";
 const googleReviewsHref = "https://maps.app.goo.gl/zXtjCVFg1iEYZuoz7";
 const yelpReviewsHref = "https://m.yelp.com/biz/the-bug-dude-pest-control-fresno";
+
+const commercialPropertyTypes = [
+  { label: "Storefronts", Icon: Store, image: "/commercial/storefront.webp" },
+  { label: "Restaurants", Icon: UtensilsCrossed, image: "/commercial/restaurant.webp" },
+  { label: "Offices", Icon: Building2, image: "/commercial/office.webp" },
+  { label: "Warehouses", Icon: Warehouse, image: "/commercial/warehouse.webp" },
+] as const;
 
 const customerReviews = [
   {
@@ -192,20 +210,22 @@ export default function Home() {
               <p className="section-copy section-copy-light">
                 Property managers and business owners usually call when ants hit a break room, roaches show up in a kitchen, spiders keep coming back in a storefront, or rodents become a facilities problem. Tell us the property type and what you’re seeing. We’ll talk through an estimate and scheduling from there.
               </p>
-              <div className="property-list">
-                <div>
-                  <span>01</span>Storefronts
-                </div>
-                <div>
-                  <span>02</span>Restaurants
-                </div>
-                <div>
-                  <span>03</span>Offices
-                </div>
-                <div>
-                  <span>04</span>Warehouses
-                </div>
-              </div>
+              <ul className="property-list" aria-label="Commercial property types">
+                {commercialPropertyTypes.map(({ label, Icon, image }) => (
+                  <li key={label}>
+                    <span
+                      className="property-photo"
+                      style={{ backgroundImage: `url(${image})` }}
+                      aria-hidden="true"
+                    />
+                    <span className="property-scrim" aria-hidden="true" />
+                    <span className="property-label">
+                      <Icon className="property-icon" size={28} strokeWidth={2} aria-hidden />
+                      <span>{label}</span>
+                    </span>
+                  </li>
+                ))}
+              </ul>
               <div className="action-row" style={{ marginTop: 36 }}>
                 <Link className="button button-alt" href="/commercial">
                   Commercial services <ArrowRight size={18} />

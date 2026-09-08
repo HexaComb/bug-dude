@@ -1,7 +1,280 @@
 {
-  "northStar": "The Fresno Field Dispatch Board",
-  "motion": { "buttonLift": "transform 200ms ease", "reducedMotion": "disable nonessential transforms" },
-  "breakpoints": { "mobile": "800px" },
-  "elevation": { "dispatch": "16px 16px 0 rgba(0, 71, 114, .28)", "form": "12px 12px 0 #da2a25" },
-  "notes": "Logo-derived blue, red, and yellow are mandatory brand anchors."
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T05:49:00.000Z",
+  "title": "Design System: The Bug Dude Pest Control",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Dispatch Ink",
+        "canonical": "#08243a",
+        "tonalRamp": ["#041018", "#08243a", "#0f3550", "#1a4a68", "#2a6284", "#4d7f9c", "#b9d7e6", "#e8f7ff"]
+      },
+      "splash-blue": {
+        "role": "primary",
+        "displayName": "Splash Blue",
+        "canonical": "#14a8e9",
+        "tonalRamp": ["#06415c", "#0a6a94", "#0d88bc", "#14a8e9", "#3fbaee", "#6fcbf3", "#a6dff8", "#e8f7ff"]
+      },
+      "service-blue": {
+        "role": "secondary",
+        "displayName": "Service Blue",
+        "canonical": "#006db6",
+        "tonalRamp": ["#013a61", "#004f82", "#005e9c", "#006db6", "#2a88c7", "#5aa7d6", "#97c9e8", "#e8f7ff"]
+      },
+      "bug-red": {
+        "role": "primary",
+        "displayName": "Bug Red",
+        "canonical": "#da2a25",
+        "tonalRamp": ["#5c100e", "#8a1814", "#b3211d", "#da2a25", "#e45450", "#ed8380", "#f5b6b4", "#fdeceb"]
+      },
+      "signal-yellow": {
+        "role": "primary",
+        "displayName": "Signal Yellow",
+        "canonical": "#ffd83d",
+        "tonalRamp": ["#6b5808", "#9a7f0c", "#c9a61a", "#ffd83d", "#ffe266", "#ffeb91", "#fff4c2", "#fffbeb"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f7f9f7",
+        "tonalRamp": ["#2a3330", "#4a5752", "#6f7d77", "#96a39c", "#c0c9c3", "#dde4df", "#f7f9f7", "#ffffff"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Service Line",
+        "canonical": "#bdd6e2",
+        "tonalRamp": ["#3a5563", "#567384", "#7895a5", "#9ab4c2", "#bdd6e2", "#d2e4ec", "#e8f1f5", "#f5fafc"]
+      },
+      "ice": {
+        "role": "neutral",
+        "displayName": "Ice",
+        "canonical": "#e8f7ff",
+        "tonalRamp": ["#2a5f78", "#4a87a3", "#74aec7", "#a6d2e6", "#c9e7f5", "#e8f7ff", "#f3fbff", "#ffffff"]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Mist",
+        "canonical": "#bfe8ff",
+        "tonalRamp": ["#2a5f78", "#3f7fa0", "#5fa4c4", "#84c4df", "#bfe8ff", "#d4f0ff", "#eaf8ff", "#ffffff"]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Slate",
+        "canonical": "#3f6077",
+        "tonalRamp": ["#1a2c38", "#2a4456", "#3f6077", "#567a92", "#7a9bb0", "#a4bccb", "#cfdce4", "#eef3f6"]
+      },
+      "field-slate": {
+        "role": "neutral",
+        "displayName": "Field Slate",
+        "canonical": "#31526a",
+        "tonalRamp": ["#142433", "#223a4c", "#31526a", "#466a84", "#688aa3", "#96b0c2", "#c5d4de", "#e8eef3"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#6b7378", "#93999e", "#b8bdc1", "#d5d8db", "#e8eaec", "#f3f4f5", "#fafafa", "#ffffff"]
+      },
+      "input-stroke": {
+        "role": "neutral",
+        "displayName": "Input Stroke",
+        "canonical": "#78a5bd",
+        "tonalRamp": ["#2f4f60", "#446c82", "#5b89a0", "#78a5bd", "#96bbcf", "#b5d1df", "#d4e5ee", "#eef5f9"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero H1 only; extreme weight and tight tracking." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2 on paper and ink bands." },
+      "title": { "displayName": "Title", "purpose": "Content subheads and dispatch ticket titles." },
+      "body": { "displayName": "Body", "purpose": "Intros and supporting copy; keep measure near 65–75ch." },
+      "label": { "displayName": "Label", "purpose": "Uppercase route labels, banners, and form marks." }
+    },
+    "shadows": [
+      {
+        "name": "dispatch-pin",
+        "value": "16px 16px 0 rgba(0, 71, 114, .28)",
+        "purpose": "Hero commercial request ticket."
+      },
+      {
+        "name": "form-pin",
+        "value": "12px 12px 0 #da2a25",
+        "purpose": "Estimate form on the yellow quote band."
+      },
+      {
+        "name": "field-pin",
+        "value": "12px 12px 0 rgba(0, 71, 114, .18)",
+        "purpose": "Field photo frames; use 8px offset on small screens."
+      },
+      {
+        "name": "review-pin",
+        "value": "8px 8px 0 rgba(0, 109, 182, .12)",
+        "purpose": "Neighbor review cards."
+      },
+      {
+        "name": "button-lift",
+        "value": "0 12px 20px rgba(5, 48, 72, .22)",
+        "purpose": "Hover lift companion for primary actions."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-dispatch",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Hero arrival, scroll reveal, and roster line-ins."
+      },
+      {
+        "name": "hero-copy-arrival",
+        "value": "720ms cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Hero copy entrance."
+      },
+      {
+        "name": "dispatch-ticket-arrival",
+        "value": "760ms 110ms cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Hero ticket entrance with clip wipe."
+      },
+      {
+        "name": "scroll-reveal",
+        "value": "clip-path + translateY over 650ms",
+        "purpose": "Section reveal from queued to visible."
+      },
+      {
+        "name": "button-lift-transition",
+        "value": "transform .2s ease, box-shadow .2s ease",
+        "purpose": "Button and BBB mark hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "disable nonessential transforms and entrance animations",
+        "purpose": "Honor prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      { "name": "mobile", "value": "800px" },
+      { "name": "action-stack", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Urgent conversion action on blue or yellow bands.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Call / Text 559-321-6230</button>",
+      "css": ".ds-btn-primary { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #da2a25; color: #fff; border: 2px solid #fff; font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; font-weight: 900; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; } .ds-btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(5, 48, 72, .22); } .ds-btn-primary:focus-visible { outline: 3px solid #ffd83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Alternate Button",
+      "kind": "button",
+      "refersTo": "button-alt",
+      "description": "High-visibility secondary CTA, usually on ink or blue.",
+      "html": "<button class=\"ds-btn-alt\" type=\"button\">Commercial services →</button>",
+      "css": ".ds-btn-alt { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #ffd83d; color: #08243a; border: 2px solid transparent; font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; font-weight: 900; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; } .ds-btn-alt:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(5, 48, 72, .22); } .ds-btn-alt:focus-visible { outline: 3px solid #ffd83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Plain Button",
+      "kind": "button",
+      "refersTo": "button-plain",
+      "description": "Quiet paper action with service-blue stroke.",
+      "html": "<a class=\"ds-btn-plain\" href=\"#\">← Back to home</a>",
+      "css": ".ds-btn-plain { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #fff; color: #006db6; border: 2px solid #006db6; font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; font-weight: 900; text-decoration: none; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; } .ds-btn-plain:hover { transform: translateY(-3px); box-shadow: 0 12px 20px rgba(5, 48, 72, .22); } .ds-btn-plain:focus-visible { outline: 3px solid #ffd83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Estimate Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Square white field with route-label above.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Phone</span><input class=\"ds-field-input\" type=\"tel\" placeholder=\"559-555-1234\" /></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; } .ds-field-label { font-size: .8rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; color: #08243a; } .ds-field-input { width: 100%; border: 1px solid #78a5bd; padding: 12px; color: #08243a; background: #fff; border-radius: 0; font: inherit; } .ds-field-input:focus-visible { outline: 3px solid #ffd83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Site Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "White operational bar with splash-blue lower rule and red phone action.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a class=\"ds-brand\" href=\"#\">The Bug Dude</a><div class=\"ds-nav-links\"><a href=\"#commercial\">Commercial</a><a href=\"#services\">Services</a><a class=\"ds-phone\" href=\"tel:5593216230\">559-321-6230</a></div></nav>",
+      "css": ".ds-nav { max-width: 1180px; margin: 0 auto; min-height: 83px; padding: 10px 22px; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: #fff; border-bottom: 4px solid #14a8e9; font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; } .ds-brand { font-weight: 950; color: #08243a; text-decoration: none; } .ds-nav-links { display: flex; align-items: center; gap: 24px; font-weight: 800; font-size: .88rem; } .ds-nav-links a { color: #08243a; text-decoration: none; } .ds-nav-links a:hover { color: #da2a25; } .ds-phone { color: #da2a25; font-size: .95rem; font-weight: 900; } .ds-nav a:focus-visible { outline: 3px solid #ffd83d; outline-offset: 3px; }"
+    },
+    {
+      "name": "Dispatch Panel",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Commercial service request ticket with hard pin shadow.",
+      "html": "<aside class=\"ds-dispatch\"><div class=\"ds-dispatch-head\">COMMERCIAL SERVICE REQUEST</div><div class=\"ds-dispatch-banner\">Serving Fresno County and Madera County</div><div class=\"ds-dispatch-body\"><p class=\"ds-dispatch-title\">Tell us what’s going on</p><div class=\"ds-request-line\"><span>Property</span><strong>Business or home</strong></div><div class=\"ds-availability\"><span class=\"ds-status\"></span>Same-day when we can make it work</div></div></aside>",
+      "css": ".ds-dispatch { background: #fff; color: #08243a; box-shadow: 16px 16px 0 rgba(0, 71, 114, .28); font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; max-width: 420px; } .ds-dispatch-head { padding: 13px 20px; background: #08243a; color: #ffd83d; font-size: .76rem; letter-spacing: .13em; font-weight: 900; } .ds-dispatch-banner { margin: 0; padding: 8px 20px; background: #ffd83d; color: #da2a25; font-size: .72rem; font-weight: 950; letter-spacing: .06em; text-align: center; text-transform: uppercase; } .ds-dispatch-body { padding: 24px; } .ds-dispatch-title { margin: 0 0 17px; font-size: 1.7rem; font-weight: 950; letter-spacing: -.04em; } .ds-request-line { padding: 13px 0; display: flex; justify-content: space-between; gap: 18px; border-top: 1px solid #bdd6e2; font-size: .9rem; } .ds-request-line strong { color: #006db6; text-align: right; } .ds-availability { margin-top: 20px; padding: 14px; display: flex; gap: 12px; align-items: center; background: #e8f7ff; font-weight: 800; } .ds-status { width: 12px; height: 12px; flex: 0 0 auto; background: #da2a25; border-radius: 50%; }"
+    },
+    {
+      "name": "Property Roster Cell",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Ink-band commercial property type with yellow Lucide-style icon.",
+      "html": "<div class=\"ds-property\"><svg class=\"ds-property-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 9l1-4h16l1 4\"/><path d=\"M3 9v11h18V9\"/><path d=\"M9 22V12h6v10\"/></svg><span>Storefronts</span></div>",
+      "css": ".ds-property { min-height: 120px; padding: 24px 30px; display: flex; align-items: center; gap: 16px; background: #08243a; color: #fff; border-top: 2px solid rgba(255,255,255,.42); border-bottom: 2px solid rgba(255,255,255,.42); font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; font-size: 1.1rem; font-weight: 900; } .ds-property-icon { width: 28px; height: 28px; flex: 0 0 auto; stroke: #ffd83d; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }"
+    },
+    {
+      "name": "Estimate Form Shell",
+      "kind": "card",
+      "refersTo": null,
+      "description": "White form card with red hard-offset pin on the yellow quote band.",
+      "html": "<form class=\"ds-form\"><label class=\"ds-field\"><span class=\"ds-field-label\">Name</span><input class=\"ds-field-input\" type=\"text\" /></label><button class=\"ds-btn-primary\" type=\"submit\">Request an estimate</button></form>",
+      "css": ".ds-form { padding: 28px; background: #fff; box-shadow: 12px 12px 0 #da2a25; max-width: 420px; font-family: \"Avenir Next\", Avenir, \"Segoe UI\", sans-serif; } .ds-field { display: grid; gap: 6px; margin-bottom: 14px; } .ds-field-label { font-size: .8rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; color: #08243a; } .ds-field-input { width: 100%; border: 1px solid #78a5bd; padding: 12px; color: #08243a; background: #fff; border-radius: 0; font: inherit; } .ds-btn-primary { min-height: 52px; padding: 14px 21px; display: inline-flex; align-items: center; justify-content: center; background: #da2a25; color: #fff; border: 2px solid #fff; font-weight: 900; cursor: pointer; } .ds-btn-primary:focus-visible, .ds-field-input:focus-visible { outline: 3px solid #ffd83d; outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Fresno Field Dispatch Board",
+    "overview": "The site turns the company’s vivid vehicle logo into a practical visual system: electric blue is the operating surface, red is the urgent action, and yellow is the signal that helps a visitor decide where to look. It should feel local, direct, and capable—an operations partner rather than a faceless contractor.\n\nSaturated brand fields carry the persuasion work. Paper sections hold proof, process, and forms. Ink bands (commercial roster, process, footer) read like night-shift dispatch surfaces. Real truck and field photography, Lucide stroke icons, and hard offset “pinned paperwork” shadows do the material storytelling. Decorative pest artwork never leads.",
+    "keyCharacteristics": [
+      "Direct, weighty display type with tight tracking and balanced headlines",
+      "Asymmetric hero: conversion copy left, commercial request ticket right",
+      "Flat color planes plus purposeful hard-offset shadows on dispatch artifacts",
+      "Logo-derived splash punctuation only in the hero; square controls everywhere else",
+      "Motion that reveals sections with clip and offset, never decorative blur"
+    ],
+    "rules": [
+      {
+        "name": "The Logo Triad Rule",
+        "body": "Splash blue, bug red, and signal yellow come from public/bug-dude-logo.png. Do not invent a fourth brand accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Quiet Secondary Rule",
+        "body": "Slate, mist, and ice exist for readable hierarchy on paper and ink. They never replace the triad for primary actions.",
+        "section": "colors"
+      },
+      {
+        "name": "The Weight Carries Emphasis Rule",
+        "body": "Emphasis comes from weight, size, and yellow highlight on display words—not gradient fills on type.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Job Per Band Rule",
+        "body": "Each major band owns one headline, one short supporting thought, and one primary action path.",
+        "section": "layout"
+      },
+      {
+        "name": "The Pinned Paper Rule",
+        "body": "Hard zero-blur offsets are reserved for dispatch artifacts (ticket, form, field frame, review card). Do not apply them to every container.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Dispatch Rule",
+        "body": "Do not round the system into pill buttons or soft SaaS cards.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do treat public/bug-dude-logo.png and its blue / red / yellow relationship as the brand authority.",
+      "Do keep call, estimate, and booking paths explicit in every major band.",
+      "Do use hard-offset pins for dispatch artifacts and soft lift only for hover.",
+      "Do prefer real field photography and Lucide stroke icons over decorative pest illustration as the visual driver.",
+      "Do honor prefers-reduced-motion by disabling nonessential transforms and entrance animations."
+    ],
+    "donts": [
+      "Don't invent testimonials, commercial clients, licenses, guarantees, or statistics.",
+      "Don't lead pages with generic pest iconography or emoji.",
+      "Don't round every surface into a SaaS card system or pill cluster.",
+      "Don't use gradient fills on text, decorative glass blur, or multi-layer ambient glow as the depth system.",
+      "Don't add a fourth brand accent outside the logo triad."
+    ]
+  }
 }
