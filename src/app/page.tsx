@@ -27,6 +27,7 @@ import {
   buildFaqJsonLd,
   buildWebPageJsonLd,
   openGraphSite,
+  pestGuideHref,
   siteConfig,
 } from "@/lib/site";
 
@@ -101,9 +102,9 @@ const customerReviews = [
 const featuredPests = [
   { name: "Black widow", image: "/pests/black-widow.webp" },
   { name: "Ants", image: "/pests/ant.webp" },
-  { name: "German roach", image: "/pests/german-roach.webp" },
-  { name: "Mice", image: "/pests/mouse.webp" },
-  { name: "Bed bugs", image: "/pests/bed-bug.webp" },
+  { name: "German roach", image: "/pests/german-roach.webp", href: siteConfig.pages.roachControlFresno.path },
+  { name: "Mice", image: "/pests/mouse.webp", href: siteConfig.pages.rodentControlFresno.path },
+  { name: "Bed bugs", image: "/pests/bed-bug.webp", href: siteConfig.pages.bedBugExterminatorFresno.path },
 ] as const;
 
 export default function Home() {
@@ -263,7 +264,10 @@ export default function Home() {
               <div>
                 <h2>Get rid of common pests from the 559.</h2>
                 <p className="section-intro">
-                  Home or business. Ants, roaches, spiders, bed bugs, rodents, and the rest. Tell us what you&apos;re dealing with and we&apos;ll call back.
+                  Home or business. Ants,{" "}
+                  <Link href={siteConfig.pages.roachControlFresno.path}>roaches</Link>, spiders,{" "}
+                  <Link href={siteConfig.pages.bedBugExterminatorFresno.path}>bed bugs</Link>,{" "}
+                  <Link href={siteConfig.pages.rodentControlFresno.path}>rodents</Link>, and the rest. Tell us what you&apos;re dealing with and we&apos;ll call back.
                 </p>
                 <p className="section-copy">
                   One-time visits are fine if you don&apos;t want a contract. A few details in the form is enough to get started.
@@ -282,6 +286,7 @@ export default function Home() {
                   icon={<Rat />}
                   title="Rodents"
                   text="Mice and rats at homes, rentals, and commercial sites."
+                  href={siteConfig.pages.rodentControlFresno.path}
                 />
                 <Service
                   icon={<ClipboardCheck />}
@@ -307,28 +312,45 @@ export default function Home() {
                 ariaLabel="Pests photographed on service stops"
               />
               <ul className="pest-icon-grid" aria-label="Common pests The Bug Dude treats">
-                {featuredPests.map((pest) => (
-                  <li key={pest.name}>
-                    <span className="pest-icon" aria-hidden="true">
-                      <Image
-                        src={pest.image}
-                        alt=""
-                        width={96}
-                        height={96}
-                        sizes="52px"
-                      />
-                    </span>
-                    <span>{pest.name}</span>
-                  </li>
-                ))}
+                {featuredPests.map((pest) => {
+                  const content = (
+                    <>
+                      <span className="pest-icon" aria-hidden="true">
+                        <Image
+                          src={pest.image}
+                          alt=""
+                          width={96}
+                          height={96}
+                          sizes="52px"
+                        />
+                      </span>
+                      <span>{pest.name}</span>
+                    </>
+                  );
+
+                  return (
+                    <li key={pest.name}>
+                      {"href" in pest ? <Link href={pest.href}>{content}</Link> : content}
+                    </li>
+                  );
+                })}
               </ul>
               <ul className="pest-keyword-list">
-                {siteConfig.pestGuides.map((pest) => (
-                  <li key={pest.name}>
-                    <strong>{pest.name}</strong>
-                    <span>{pest.summary}</span>
-                  </li>
-                ))}
+                {siteConfig.pestGuides.map((pest) => {
+                  const href = pestGuideHref(pest);
+                  return (
+                    <li key={pest.name}>
+                      {href ? (
+                        <Link href={href}>
+                          <strong>{pest.name}</strong>
+                        </Link>
+                      ) : (
+                        <strong>{pest.name}</strong>
+                      )}
+                      <span>{pest.summary}</span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </section>
@@ -466,12 +488,22 @@ export default function Home() {
   );
 }
 
-function Service({ icon, title, text }: { icon: ReactNode; title: string; text: string }) {
+function Service({
+  icon,
+  title,
+  text,
+  href,
+}: {
+  icon: ReactNode;
+  title: string;
+  text: string;
+  href?: string;
+}) {
   return (
     <article className="service-item">
       {icon}
       <div>
-        <h3>{title}</h3>
+        <h3>{href ? <Link href={href}>{title}</Link> : title}</h3>
         <p>{text}</p>
       </div>
     </article>

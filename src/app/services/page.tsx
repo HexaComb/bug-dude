@@ -9,6 +9,7 @@ import {
   buildFaqJsonLd,
   buildWebPageJsonLd,
   openGraphSite,
+  pestGuideHref,
   siteConfig,
 } from "@/lib/site";
 
@@ -59,7 +60,10 @@ export default function ServicesPage() {
         The Bug Dude handles common household and commercial pests around Fresno. Tell us what you saw, home or business, and we&apos;ll follow up with estimate options.
       </p>
       <p className="section-copy">
-        Ants, roaches, spiders, bed bugs, or rodents? Check the list below, then request an estimate or call{" "}
+        Ants,{" "}
+        <Link href={siteConfig.pages.roachControlFresno.path}>roaches</Link>, spiders,{" "}
+        <Link href={siteConfig.pages.bedBugExterminatorFresno.path}>bed bugs</Link>, or{" "}
+        <Link href={siteConfig.pages.rodentControlFresno.path}>rodents</Link>? Check the list below, then request an estimate or call{" "}
         <a href={siteConfig.phoneHref}>{siteConfig.phoneDisplay}</a>.
       </p>
       <h2 className="content-subhead">{pestFieldPhotoIntro.heading}</h2>
@@ -70,12 +74,15 @@ export default function ServicesPage() {
       />
       <h2 className="content-subhead">Pests we help with</h2>
       <div className="guide-list">
-        {siteConfig.pestGuides.map((pest) => (
-          <article key={pest.name} className="guide-item">
-            <h3>{pest.name}</h3>
-            <p>{pest.summary}</p>
-          </article>
-        ))}
+        {siteConfig.pestGuides.map((pest) => {
+          const href = pestGuideHref(pest);
+          return (
+            <article key={pest.name} className="guide-item">
+              <h3>{href ? <Link href={href}>{pest.name}</Link> : pest.name}</h3>
+              <p>{pest.summary}</p>
+            </article>
+          );
+        })}
       </div>
       <h2 className="content-subhead">Service options</h2>
       <p className="section-copy">
