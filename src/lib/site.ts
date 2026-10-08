@@ -51,6 +51,7 @@ export const siteConfig = {
     {
       name: "Roaches",
       summary: "Night sightings or droppings behind appliances often mean roaches.",
+      href: "/roach-control-fresno",
     },
     {
       name: "Mosquitoes",
@@ -67,10 +68,12 @@ export const siteConfig = {
     {
       name: "Bed bugs",
       summary: "Bites or blood spots on sheets can mean bed bugs.",
+      href: "/bed-bug-exterminator-fresno",
     },
     {
       name: "Rodents",
       summary: "Droppings, nesting material, scratching, or chew marks often mean rodents.",
+      href: "/rodent-control-fresno",
     },
   ] as const,
   commercialGuides: [
@@ -146,6 +149,24 @@ export const siteConfig = {
       title: "Pest Control Services in Fresno",
       description:
         "Fresno pest control for spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more. Call or request an estimate.",
+    },
+    bedBugExterminatorFresno: {
+      path: "/bed-bug-exterminator-fresno",
+      title: "Bed Bug Exterminator in Fresno",
+      description:
+        "Bed bug exterminator service in Fresno for homes, rentals, and businesses. Call 559-321-6230 or request an estimate.",
+    },
+    rodentControlFresno: {
+      path: "/rodent-control-fresno",
+      title: "Rodent Control in Fresno",
+      description:
+        "Rodent control in Fresno for mice and rats at homes, rentals, and businesses. Call 559-321-6230 or request an estimate.",
+    },
+    roachControlFresno: {
+      path: "/roach-control-fresno",
+      title: "Roach Control in Fresno",
+      description:
+        "Roach control in Fresno for kitchens, apartments, and businesses. Call 559-321-6230 or request an estimate.",
     },
   },
 } as const;
@@ -278,6 +299,41 @@ export function buildWebSiteJsonLd(): JsonLd {
     description: siteConfig.description,
     publisher: { "@id": `${url}/#business` },
     inLanguage: "en-US",
+  };
+}
+
+export function pestGuideHref(
+  pest: (typeof siteConfig.pestGuides)[number],
+): string | undefined {
+  return "href" in pest ? pest.href : undefined;
+}
+
+export function buildServiceJsonLd(input: {
+  path: string;
+  name: string;
+  description: string;
+  serviceType: string;
+  image?: string;
+}): JsonLd {
+  const url = absoluteUrl(input.path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${url}#service`,
+    name: input.name,
+    serviceType: input.serviceType,
+    description: input.description,
+    url,
+    ...(input.image ? { image: absoluteUrl(input.image) } : {}),
+    areaServed: {
+      "@type": "City",
+      name: siteConfig.locality,
+      containedInPlace: {
+        "@type": "State",
+        name: "California",
+      },
+    },
+    provider: { "@id": `${absoluteUrl("/")}/#business` },
   };
 }
 
