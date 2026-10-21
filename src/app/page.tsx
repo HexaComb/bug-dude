@@ -55,7 +55,6 @@ const phone = siteConfig.phoneDisplay;
 const phoneHref = siteConfig.phoneHref;
 const smsHref = `sms:${siteConfig.phoneE164}`;
 const bbbProfileHref = "https://www.bbb.org/us/ca/clovis/profile/pest-control/the-bug-dude-pest-control-1126-850101818";
-const bbbSealSrc = "https://m.bbb.org/brand/seals/Accredited_Business_Seal_NoRating_RGB.svg?tx=w_175";
 const googleReviewsHref = "https://maps.app.goo.gl/zXtjCVFg1iEYZuoz7";
 const yelpReviewsHref = "https://m.yelp.com/biz/the-bug-dude-pest-control-fresno";
 
@@ -159,21 +158,22 @@ export default function Home() {
                   href={bbbProfileHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="See reviews on The Bug Dude Pest Control BBB profile, BBB Accredited Business with an A+ rating"
+                  aria-label="View The Bug Dude Pest Control's BBB profile and A+ rating"
                 >
-                  <img src={bbbSealSrc} alt="BBB Accredited Business" width="116" height="44" />
                   <span className="bbb-rating">
                     <strong>A+</strong>
                     <small>BBB Rating</small>
                   </span>
                   <span className="bbb-profile-link">
-                    See reviews <ArrowRight size={15} aria-hidden />
+                    View BBB profile <ArrowRight size={15} aria-hidden />
                   </span>
                 </a>
               </div>
             </div>
             <aside className="dispatch dispatch-arrival" aria-label="Commercial service request overview">
-              <p className="service-area-banner">Serving Fresno County and Madera County</p>
+              <p className="service-area-banner">
+                Serving Fresno County and Madera County · <Link href="/service-areas">See service areas</Link>
+              </p>
               <div className="dispatch-body">
                 <p className="dispatch-title">Tell us what’s going on</p>
                 <div className="request-line">

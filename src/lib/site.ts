@@ -15,6 +15,24 @@ export const siteConfig = {
   locality: "Fresno",
   region: "CA",
   country: "US",
+  serviceAreas: ["Fresno County", "Madera County"] as const,
+  serviceCities: [
+    {
+      name: "Fresno",
+      county: "Fresno County",
+      description: "Pest control for homes, rentals, offices, restaurants, and other businesses in Fresno.",
+    },
+    {
+      name: "Sanger",
+      county: "Fresno County",
+      description: "Pest control for Sanger homes, rentals, and businesses, with estimates based on the property and pest issue.",
+    },
+    {
+      name: "Madera",
+      county: "Madera County",
+      description: "Pest control for Madera homes, rentals, and businesses. Share the pest and affected areas when you request an estimate.",
+    },
+  ] as const,
   hours: {
     days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"] as const,
     opens: "07:30",
@@ -150,6 +168,12 @@ export const siteConfig = {
       description:
         "Fresno pest control for spiders, ants, roaches, mosquitoes, fleas, ticks, earwigs, bed bugs, rodents, and more. Call or request an estimate.",
     },
+    serviceAreas: {
+      path: "/service-areas",
+      title: "Pest Control in Fresno, Sanger & Madera",
+      description:
+        "The Bug Dude serves homes, rentals, and businesses in Fresno, Sanger, Madera, and Fresno and Madera counties. Call 559-321-6230 for an estimate.",
+    },
     bedBugExterminatorFresno: {
       path: "/bed-bug-exterminator-fresno",
       title: "Bed Bug Exterminator in Fresno",
@@ -224,14 +248,18 @@ export function buildLocalBusinessJsonLd(): JsonLd {
       addressRegion: siteConfig.region,
       addressCountry: siteConfig.country,
     },
-    areaServed: {
-      "@type": "City",
-      name: siteConfig.locality,
-      containedInPlace: {
-        "@type": "State",
-        name: "California",
-      },
-    },
+    areaServed: [
+      ...siteConfig.serviceAreas.map((name) => ({
+        "@type": "AdministrativeArea",
+        name,
+        containedInPlace: { "@type": "State", name: "California" },
+      })),
+      ...siteConfig.serviceCities.map(({ name, county }) => ({
+        "@type": "City",
+        name,
+        containedInPlace: { "@type": "AdministrativeArea", name: county },
+      })),
+    ],
     openingHoursSpecification: siteConfig.hours.days.map((day) => ({
       "@type": "OpeningHoursSpecification",
       dayOfWeek: day,

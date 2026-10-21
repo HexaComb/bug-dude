@@ -63,7 +63,6 @@ button, input, select, textarea { font: inherit; }
 .action-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch; }
 .action-row > * { width: 100%; min-height: 52px; box-sizing: border-box; }
 .bbb-mark { width: 100%; min-height: 62px; padding: 8px 14px 8px 10px; display: flex; align-items: center; gap: 12px; background: #fff; color: var(--ink); border-radius: 4px; box-shadow: 0 5px 16px rgba(5, 48, 72, .15); transition: transform .2s ease, box-shadow .2s ease; }
-.bbb-mark img { display: block; width: 116px; height: 44px; object-fit: contain; }
 .bbb-rating { min-width: 64px; padding-left: 12px; display: grid; gap: 1px; border-left: 1px solid var(--line); line-height: 1; }
 .bbb-mark strong { color: var(--blue-deep); font-size: 1.45rem; font-weight: 950; letter-spacing: -.05em; }
 .bbb-mark small { color: #3f6077; font-size: .64rem; font-weight: 900; text-transform: uppercase; letter-spacing: .04em; }
@@ -309,7 +308,6 @@ button, input, select, textarea { font: inherit; }
 @media (max-width: 560px) {
   .action-row { grid-template-columns: 1fr; }
   .bbb-mark { gap: 8px; padding-inline: 10px; }
-  .bbb-mark img { width: 100px; }
   .bbb-rating { min-width: 53px; padding-left: 8px; }
   .bbb-profile-link { font-size: .7rem; }
 }
