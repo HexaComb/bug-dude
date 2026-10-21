@@ -33,6 +33,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: absoluteUrl(siteConfig.pages.serviceAreas.path),
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: absoluteUrl(siteConfig.pages.bedBugExterminatorFresno.path),
       lastModified,
       changeFrequency: "monthly",
